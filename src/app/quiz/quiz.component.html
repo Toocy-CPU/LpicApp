@@ -1,0 +1,88 @@
+<div class="container py-4" *ngIf="currentQuestion as q">
+  <div class="card shadow-sm quiz-card">
+    <div class="card-body d-flex flex-column">
+
+      <div class="question-header mb-3">
+        <h5 class="card-title">Frage {{ currentIndex + 1 }} / {{ questions.length }}</h5>
+        <p class="card-text lead">{{ q.questionText }}</p>
+      </div>
+
+      <ng-container *ngIf="q.type !== 'fi'">
+        <label
+          *ngFor="let a of q.answers; trackBy: trackByAnswer"
+          class="form-check option-card mb-2 p-3 w-100"
+          [class.selected]="isSelected(q, a.id)"
+          style="cursor: pointer;"
+        >
+          <!-- MC -->
+          <input
+            *ngIf="q.type === 'mc'"
+            class="form-check-input me-2"
+            type="checkbox"
+            [checked]="isSelected(q, a.id)"
+            (change)="onCheckboxChange(q, a.id, $any($event.target).checked)"
+          />
+
+          <!-- SC -->
+          <input
+            *ngIf="q.type === 'sc'"
+            class="form-check-input me-2"
+            type="radio"
+            [name]="'q' + q.globalId"
+            [checked]="isSelected(q, a.id)"
+            (change)="onRadioChange(q, a.id)"
+          />
+
+          <span class="w-100">{{ a.answerText }}</span>
+        </label>
+      </ng-container>
+
+      <div *ngIf="q.type === 'fi'" class="answer-options">
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          placeholder="Antwort eingeben..."
+          [ngModel]="getFillInValue(q)"
+          (ngModelChange)="onFillInChange(q, $event)"
+        />
+        <button
+          *ngIf="mode === 'learn'"
+          class="btn btn-outline-primary mt-3"
+          (click)="checkFillInFeedback(q, getFillInValue(q))"
+        >
+          Antwort prüfen
+        </button>
+      </div>
+
+      <div *ngIf="mode === 'learn' && showFeedback" class="mt-4 fade-in">
+        <div class="alert text-center"
+             [class.alert-success]="feedbackCorrect"
+             [class.alert-danger]="!feedbackCorrect">
+          {{ feedbackCorrect ? '✅ Richtig!' : '❌ Falsch.' }}
+        </div>
+        <div *ngIf="q.hint" class="alert alert-info">💡 Hinweis: {{ q.hint }}</div>
+      </div>
+
+      <div class="quiz-footer mt-auto pt-3">
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-outline-secondary" (click)="prevQuestion()" [disabled]="currentIndex === 0">⬅ Zurück</button>
+          <button class="btn btn-primary" (click)="nextQuestion()">
+            {{ currentIndex < questions.length - 1 ? 'Nächste Frage ➡' : 'Fertigstellen ✅' }}
+          </button>
+        </div>
+
+        <div class="question-nav mt-4 d-flex justify-content-center flex-wrap">
+          <button
+            *ngFor="let q of questions; let i = index"
+            class="btn btn-sm nav-bubble m-1"
+            [ngClass]="mode === 'learn' ? getNavButtonClass(q, i) : 'btn-outline-secondary'"
+            (click)="goToQuestion(i)"
+          >
+            {{ i + 1 }}
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

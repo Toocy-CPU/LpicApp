@@ -1,0 +1,36 @@
+/* Accordion Buttons einfärben */
+.accordion-button.success {
+  background-color: #d4edda; /* sanftes grün */
+  color: #155724;
+}
+.accordion-button.danger {
+  background-color: #f8d7da; /* sanftes rot */
+  color: #721c24;
+}
+.accordion-button.secondary {
+  background-color: #f1f1f1; /* helles grau */
+  color: #333;
+}
+
+/* Hover-Effekt */
+.accordion-button:hover {
+  filter: brightness(0.95);
+}
+
+/* Scrollbox schöner machen */
+.accordion {
+  border-radius: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.accordion::-webkit-scrollbar {
+  width: 8px;
+}
+.accordion::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+.accordion::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}

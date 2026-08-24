@@ -1,0 +1,22 @@
+<!-- Gesamtes Layout mit voller Höhe -->
+<div class="d-flex flex-column min-vh-100">
+
+  <!-- Header -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">LPIC 101 & 102 Exams</a>
+    </div>
+  </nav>
+
+  <!-- Hauptinhalt mit Router -->
+  <main class="flex-fill">
+    <div class="container mt-4">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <!-- Footer (immer unten) -->
+  <footer class="bg-light text-center py-3 mt-auto">
+    <small>&copy; Matthias Spieker | Paavo Schuchhardt</small>
+  </footer>
+</div>

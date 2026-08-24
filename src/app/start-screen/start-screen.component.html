@@ -1,0 +1,117 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+          <!-- Titel -->
+          <div class="text-center mb-4">
+            <h1 class="display-6 fw-bold text-primary">
+              <i class="bi bi-mortarboard-fill me-2"></i> LPIC Lern-App
+            </h1>
+            <p class="text-muted">Wähle Kategorien, Fragetypen und Modus.</p>
+          </div>
+
+          <!-- Kategorien -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-folder-check me-1 text-secondary"></i> Kategorien
+            </label>
+            <div class="d-flex gap-3 flex-wrap">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" id="k101" type="checkbox"
+                       (change)="toggleArraySelection(categories, 'lpic101')">
+                <label class="form-check-label badge rounded-pill bg-light text-dark px-3 py-2 shadow-sm" for="k101">
+                  lpic101
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" id="k102" type="checkbox"
+                       (change)="toggleArraySelection(categories, 'lpic102')">
+                <label class="form-check-label badge rounded-pill bg-light text-dark px-3 py-2 shadow-sm" for="k102">
+                  lpic102
+                </label>
+              </div>
+            </div>
+            <small class="form-text text-muted">Wenn nichts gewählt ist, werden beide verwendet.</small>
+          </div>
+
+          <!-- Typen -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-ui-checks-grid me-1 text-secondary"></i> Fragetypen
+            </label>
+            <div class="d-flex gap-3 flex-wrap">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" id="tSC" type="checkbox"
+                       (change)="toggleArraySelection(types, 'sc')">
+                <label class="form-check-label badge rounded-pill bg-info text-dark px-3 py-2 shadow-sm" for="tSC">
+                  Single Choice
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" id="tMC" type="checkbox"
+                       (change)="toggleArraySelection(types, 'mc')">
+                <label class="form-check-label badge rounded-pill bg-warning text-dark px-3 py-2 shadow-sm" for="tMC">
+                  Multiple Choice
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" id="tFI" type="checkbox"
+                       (change)="toggleArraySelection(types, 'fi')">
+                <label class="form-check-label badge rounded-pill bg-success text-white px-3 py-2 shadow-sm" for="tFI">
+                  Fill-In
+                </label>
+              </div>
+            </div>
+            <small class="form-text text-muted">Wenn nichts gewählt ist, werden alle verwendet.</small>
+          </div>
+
+          <!-- Modus -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-sliders me-1 text-secondary"></i> Modus
+            </label>
+            <div class="list-group shadow-sm rounded-3">
+              <label class="list-group-item d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="mode" [(ngModel)]="mode" value="learn" checked>
+                <span><strong>Lernmodus</strong> <small class="text-muted"> (Feedback nach jeder Frage)</small></span>
+              </label>
+              <label class="list-group-item d-flex align-items-center">
+                <input class="form-check-input me-2" type="radio" name="mode" [(ngModel)]="mode" value="exam">
+                <span><strong>Prüfungsmodus</strong> <small class="text-muted"> (Feedback am Ende)</small></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Shuffle -->
+          <div class="form-check mb-4">
+            <input class="form-check-input" id="shuffleCheck" type="checkbox" [(ngModel)]="shuffle">
+            <label class="form-check-label" for="shuffleCheck">
+              <i class="bi bi-shuffle me-1"></i> Fragen mischen
+            </label>
+          </div>
+
+          <!-- Limit -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-list-ol me-1 text-secondary"></i> Anzahl Fragen
+            </label>
+            <input type="number"
+                   class="form-control"
+                   [(ngModel)]="limit"
+                   min="1"
+                   placeholder="Alle (Standard)">
+            <small class="form-text text-muted">Lass das Feld leer, um alle Fragen zu nutzen.</small>
+          </div>
+
+          <!-- Button -->
+          <div class="text-center">
+            <button class="btn btn-lg btn-primary px-5 shadow-sm hover-shadow" (click)="start()">
+              <i class="bi bi-play-fill me-2"></i> Starten
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2909 @@
+{
+    "lpic101":
+    [
+  {
+    "id": 1,
+    "type": "sc",
+    "questionText": "Which of the following commands will write a message to the terminals of all logged in users?",
+    "answers": [
+      { "id": 1, "answerText": "bcast", "isCorrect": false},
+      { "id": 2, "answerText": "mesg", "isCorrect": false},
+      { "id": 3, "answerText": "print", "isCorrect": false},
+      { "id": 4, "answerText": "wall", "isCorrect": true},
+      { "id": 5, "answerText": "yell", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 2,
+    "type": "sc",
+    "questionText": "Which of the following statements is correct when talking about /proc/?",
+    "answers": [
+      { "id": 1, "answerText": "All changes to files in /proc/ are stored in /etc/proc.d/ and restored on reboot.", "isCorrect": false},
+      { "id": 2, "answerText": "All files within /proc/ are read-only and their contents cannot be changed.", "isCorrect": false},
+      { "id": 3, "answerText": "All changes to files in /proc/ are immediately recognized by the kernel.", "isCorrect": true},
+      { "id": 4, "answerText": "All files within /proc/ are only readable by the root user.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 3,
+    "type": "fi",
+    "questionText": "Which command will display messages from the kernel that were output during the normal boot sequence?",
+    "answers": [
+      { "id": 1, "answerText": "dmesg", "isCorrect": true },
+      { "id": 2, "answerText": "/bin/dmesg", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 4,
+    "type": "mc",
+    "questionText": "Which of the following are init systems used within Linux systems? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "startd", "isCorrect": false},
+      { "id": 2, "answerText": "systemd", "isCorrect": true},
+      { "id": 3, "answerText": "Upstart", "isCorrect": true},
+      { "id": 4, "answerText": "SysInit", "isCorrect": false},
+      { "id": 5, "answerText": "SysV init", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 5,
+    "type": "mc",
+    "questionText": "Which of the following commands reboots the system when using SysV init? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "shutdown -r now", "isCorrect": true},
+      { "id": 2, "answerText": "shutdown -r \"rebooting\"", "isCorrect": false},
+      { "id": 3, "answerText": "telinit 6", "isCorrect": true},
+      { "id": 4, "answerText": "telinit 0", "isCorrect": false},
+      { "id": 5, "answerText": "shutdown -k now \"rebooting\"", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 6,
+    "type": "mc",
+    "questionText": "Which run levels should never be declared as the default run level when using SysV init? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "0", "isCorrect": true},
+      { "id": 2, "answerText": "1", "isCorrect": false},
+      { "id": 3, "answerText": "3", "isCorrect": false},
+      { "id": 4, "answerText": "5", "isCorrect": false},
+      { "id": 5, "answerText": "6", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 7,
+    "type": "mc",
+    "questionText": "What information can the lspci command display about the system hardware? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Device IRQ settings", "isCorrect": true},
+      { "id": 2, "answerText": "PCI bus speed", "isCorrect": true},
+      { "id": 3, "answerText": "System battery type", "isCorrect": false},
+      { "id": 4, "answerText": "Device vendor identification", "isCorrect": true},
+      { "id": 5, "answerText": "Ethernet MAC address", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 8,
+    "type": "mc",
+    "questionText": "Which of the following commands brings a system running SysV init into a state in which it is safe to perform maintenance tasks? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "shutdown -R 1 now", "isCorrect": false},
+      { "id": 2, "answerText": "shutdown -single now", "isCorrect": false},
+      { "id": 3, "answerText": "init 1", "isCorrect": true},
+      { "id": 4, "answerText": "telinit 1", "isCorrect": true},
+      { "id": 5, "answerText": "runlevel 1", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 9,
+    "type": "sc",
+    "questionText": "What is the first program that is usually started, at boot time, by the Linux kernel when using SysV init?",
+    "answers": [
+      { "id": 1, "answerText": "/lib/init.so", "isCorrect": false},
+      { "id": 2, "answerText": "/sbin/init", "isCorrect": true},
+      { "id": 3, "answerText": "/etc/rc.d/rcinit", "isCorrect": false},
+      { "id": 4, "answerText": "/proc/sys/kernel/init", "isCorrect": false},
+      { "id": 5, "answerText": "/boot/init", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 10,
+    "type": "sc",
+    "questionText": "Which SysV init configuration file should be modified to disable the ctrl-alt-delete key combination?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/keys", "isCorrect": false},
+      { "id": 2, "answerText": "/proc/keys", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/inittab", "isCorrect": true},
+      { "id": 4, "answerText": "/proc/inittab", "isCorrect": false},
+      { "id": 5, "answerText": "/etc/reboot", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 11,
+    "type": "sc",
+    "questionText": "Which of the following options for the kernel's command line changes the systemd boot target to rescue.target instead of the default target?",
+    "answers": [
+      { "id": 1, "answerText": "systemd.target=rescue.target", "isCorrect": false},
+      { "id": 2, "answerText": "systemd.runlevel=rescue.target", "isCorrect": false},
+      { "id": 3, "answerText": "systemd.service=rescue.target", "isCorrect": false},
+      { "id": 4, "answerText": "systemd.default=rescue.target", "isCorrect": false},
+      { "id": 5, "answerText": "systemd.unit=rescue.target", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 12,
+    "type": "sc",
+    "questionText": "Which of the following kernel parameters instructs the kernel to suppress most boot messages?",
+    "answers": [
+      { "id": 1, "answerText": "silent", "isCorrect": false},
+      { "id": 2, "answerText": "verbose=0", "isCorrect": false},
+      { "id": 3, "answerText": "nomesg", "isCorrect": false},
+      { "id": 4, "answerText": "quiet", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 13,
+    "type": "mc",
+    "questionText": "Which of the following information is stored within the BIOS? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Boot device order", "isCorrect": true},
+      { "id": 2, "answerText": "Linux kernel version", "isCorrect": false},
+      { "id": 3, "answerText": "Timezone", "isCorrect": false},
+      { "id": 4, "answerText": "Hardware configuration", "isCorrect": true},
+      { "id": 5, "answerText": "The system's hostname", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 14,
+    "type": "fi",
+    "questionText": "Which file in the /proc filesystem lists parameters passed from the bootloader to the kernel? (Specify the file name only without any path.)",
+    "answers": [
+      { "id": 1, "answerText": "cmdline", "isCorrect": true },
+      { "id": 2, "answerText": "/proc/cmdline", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 15,
+    "type": "sc",
+    "questionText": "During a system boot cycle, what program is executed after the BIOS completes its tasks?",
+    "answers": [
+      { "id": 1, "answerText": "The bootloader", "isCorrect": true},
+      { "id": 2, "answerText": "The inetd program", "isCorrect": false},
+      { "id": 3, "answerText": "The init program", "isCorrect": false},
+      { "id": 4, "answerText": "The kernel", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 16,
+    "type": "mc",
+    "questionText": "What of the following statements are true regarding /dev/ when using udev? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Entries for all possible devices get created on boot even if those devices are not connected.", "isCorrect": false},
+      { "id": 2, "answerText": "Additional rules for udev can be created by adding them to /etc/udev/rules.d/.", "isCorrect": true},
+      { "id": 3, "answerText": "When using udev, it is not possible to create block or character devices in /dev/ using mknod.", "isCorrect": false},
+      { "id": 4, "answerText": "The /dev/ directory is a filesystem of type tmpfs and is mounted by udev during system startup.", "isCorrect": true},
+      { "id": 5, "answerText": "The content of /dev/ is stored in /etc/udev/dev and is restored during system startup.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 17,
+    "type": "sc",
+    "questionText": "Which of the following commands lists the dependencies of a given dpkg package?",
+    "answers": [
+      { "id": 1, "answerText": "apt-cache depends-on package", "isCorrect": false},
+      { "id": 2, "answerText": "apt-cache dependencies package", "isCorrect": false},
+      { "id": 3, "answerText": "apt-cache depends package", "isCorrect": true},
+      { "id": 4, "answerText": "apt-cache requires package", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 18,
+    "type": "sc",
+    "questionText": "Which function key is used to start Safe Mode in Windows NT?",
+    "answers": [
+      { "id": 1, "answerText": "F10", "isCorrect": false},
+      { "id": 2, "answerText": "F8", "isCorrect": false},
+      { "id": 3, "answerText": "F6", "isCorrect": false},
+      { "id": 4, "answerText": "Windows NT does not support Safe Mode", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 19,
+    "type": "mc",
+    "questionText": "When using rpm --verify to check files created during the installation of RPM packages, which of the following information is taken into consideration? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Timestamps", "isCorrect": true},
+      { "id": 2, "answerText": "MD5 checksums", "isCorrect": true},
+      { "id": 3, "answerText": "Inodes", "isCorrect": false},
+      { "id": 4, "answerText": "File sizes", "isCorrect": true},
+      { "id": 5, "answerText": "GnuPG signatures", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 20,
+    "type": "fi",
+    "questionText": "Which option to the yum command will update the entire system? (Specify ONLY the option name without any additional parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "update", "isCorrect": true },
+      { "id": 2, "answerText": "upgrade", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 21,
+    "type": "fi",
+    "questionText": "In which directory must definition files be placed to add additional repositories to yum?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/yum.repos.d", "isCorrect": true },
+      { "id": 2, "answerText": "/etc/yum.repos.d/", "isCorrect": true },
+      { "id": 3, "answerText": "yum.repos.d", "isCorrect": true },
+      { "id": 4, "answerText": "yum.repos.d/", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 22,
+    "type": "sc",
+    "questionText": "Which of the following commands lists all currently installed packages when using RPM package management?",
+    "answers": [
+      { "id": 1, "answerText": "yum --query --all", "isCorrect": false},
+      { "id": 2, "answerText": "yum --list --installed", "isCorrect": false},
+      { "id": 3, "answerText": "rpm --query --all", "isCorrect": true},
+      { "id": 4, "answerText": "rpm --list –installed", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 23,
+    "type": "fi",
+    "questionText": "What is the name of the main configuration file for GNU GRUB? (Specify the file name only without any path.)",
+    "answers": [
+      { "id": 1, "answerText": "menu.lst", "isCorrect": true },
+      { "id": 2, "answerText": "grub.conf", "isCorrect": true },
+      { "id": 3, "answerText": "grub.cfg", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 24,
+    "type": "sc",
+    "questionText": "Which of the following commands can be used to download the RPM package kernel without installing it?",
+    "answers": [
+      { "id": 1, "answerText": "yum download --no-install kernel", "isCorrect": false},
+      { "id": 2, "answerText": "yumdownloader kernel", "isCorrect": true},
+      { "id": 3, "answerText": "rpm --download --package kernel", "isCorrect": false},
+      { "id": 4, "answerText": "rpmdownload kernel", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 25,
+    "type": "sc",
+    "questionText": "After modifying GNU GRUB's configuration file, which command must be run for the changes to take effect?",
+    "answers": [
+      { "id": 1, "answerText": "kill -HUP $(pidof grub)", "isCorrect": false},
+      { "id": 2, "answerText": "grub-install", "isCorrect": false},
+      { "id": 3, "answerText": "grub", "isCorrect": false},
+      { "id": 4, "answerText": "No action is required", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 26,
+    "type": "sc",
+    "questionText": "Which of the following commands overwrites the bootloader located on /dev/sda without overwriting the partition table or any data following it?",
+    "answers": [
+      { "id": 1, "answerText": "dd if=/dev/zero of=/dev/sda bs=512", "isCorrect": false},
+      { "id": 2, "answerText": "dd if=/dev/zero of=/dev/sda bs=512 count=1", "isCorrect": false},
+      { "id": 3, "answerText": "dd if=/dev/zero of=/dev/sda bs=440 count=1", "isCorrect": true},
+      { "id": 4, "answerText": "dd if=/dev/zero of=/dev/sda bs=440", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 27,
+    "type": "sc",
+    "questionText": "Which of the following is correct when talking about mount points?",
+    "answers": [
+      { "id": 1, "answerText": "Every existing directory can be used as a mount point.", "isCorrect": true},
+      { "id": 2, "answerText": "Only empty directories can be used as a mount point.", "isCorrect": false},
+      { "id": 3, "answerText": "Directories need to have the SetUID flag set to be used as a mount point.", "isCorrect": false},
+      { "id": 4, "answerText": "Files within a directory are deleted when the directory is used as a mount point.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 28,
+    "type": "sc",
+    "questionText": "Which of the following commands updates the linker cache of shared libraries?",
+    "answers": [
+      { "id": 1, "answerText": "mkcache", "isCorrect": false},
+      { "id": 2, "answerText": "soconfig", "isCorrect": false},
+      { "id": 3, "answerText": "mkldconfig", "isCorrect": false},
+      { "id": 4, "answerText": "lddconfig", "isCorrect": false},
+      { "id": 5, "answerText": "ldconfig", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 29,
+    "type": "sc",
+    "questionText": "Which of the following environment variables overrides or extends the list of directories holding shared libraries?",
+    "answers": [
+      { "id": 1, "answerText": "LD_LOAD_PATH", "isCorrect": false},
+      { "id": 2, "answerText": "LD_LIB_PATH", "isCorrect": false},
+      { "id": 3, "answerText": "LD_LIBRARY_PATH", "isCorrect": true},
+      { "id": 4, "answerText": "LD_SHARE_PATH", "isCorrect": false},
+      { "id": 5, "answerText": "LD_RUN_PATH", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 30,
+    "type": "fi",
+    "questionText": "Which Debian package management tool asks the configuration questions for a specific already installed package just as if the package were being installed for the first time? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "dpkg-reconfigure", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 31,
+    "type": "sc",
+    "questionText": "Which of the following commands is used to update the list of available packages when using dpkg based package management?",
+    "answers": [
+      { "id": 1, "answerText": "apt-get update", "isCorrect": true},
+      { "id": 2, "answerText": "apt-get upgrade", "isCorrect": false},
+      { "id": 3, "answerText": "apt-cache update", "isCorrect": false},
+      { "id": 4, "answerText": "apt-get refresh", "isCorrect": false},
+      { "id": 5, "answerText": "apt-cache upgrade", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 32,
+    "type": "fi",
+    "questionText": "Which world-writable directory should be placed on a separate partition in order to prevent users from being able to fill up the / filesystem? (Specify the full path to the directory.)",
+    "answers": [
+      { "id": 1, "answerText": "/tmp", "isCorrect": true },
+      { "id": 2, "answerText": "tmp", "isCorrect": true },
+      { "id": 3, "answerText": "/var/tmp", "isCorrect": true },
+      { "id": 4, "answerText": "/tmp/", "isCorrect": true },
+      { "id": 5, "answerText": "/var/tmp/", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 33,
+    "type": "mc",
+    "questionText": "What can the Logical Volume Manager (LVM) be used for? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "To create RAID 9 arrays.", "isCorrect": false},
+      { "id": 2, "answerText": "To dynamically change the size of logical volumes.", "isCorrect": true},
+      { "id": 3, "answerText": "To encrypt logical volumes.", "isCorrect": false},
+      { "id": 4, "answerText": "To create snapshots.", "isCorrect": true},
+      { "id": 5, "answerText": "To dynamically create or delete logical volumes.", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 34,
+    "type": "sc",
+    "questionText": "Which RPM command will output the name of the package which supplied the file /etc/exports?",
+    "answers": [
+      { "id": 1, "answerText": "rpm -F /etc/exports", "isCorrect": false},
+      { "id": 2, "answerText": "rpm -qf /etc/exports", "isCorrect": true},
+      { "id": 3, "answerText": "rpm -Kl /etc/exports", "isCorrect": false},
+      { "id": 4, "answerText": "rpm -qp /etc/exports", "isCorrect": false},
+      { "id": 5, "answerText": "rpm -qi /etc/exports", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 35,
+    "type": "sc",
+    "questionText": "Which file should be edited to select the network locations from which Debian installation package files are loaded?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/dpkg/dpkg.cfg", "isCorrect": false},
+      { "id": 2, "answerText": "/etc/apt/apt.conf", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/apt/apt.conf.d", "isCorrect": false},
+      { "id": 4, "answerText": "/etc/apt/sources.list", "isCorrect": true},
+      { "id": 5, "answerText": "/etc/dpkg/dselect.cfg", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 36,
+    "type": "fi",
+    "questionText": "Which command will disable swapping on a device? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "swapoff", "isCorrect": true },
+      { "id": 2, "answerText": "/sbin/swapoff", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 37,
+    "type": "sc",
+    "questionText": "When removing a package, which of the following dpkg options will completely remove the files including configuration files?",
+    "answers": [
+      { "id": 1, "answerText": "--clean", "isCorrect": false},
+      { "id": 2, "answerText": "--delete", "isCorrect": false},
+      { "id": 3, "answerText": "--purge", "isCorrect": true},
+      { "id": 4, "answerText": "–remove", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 38,
+    "type": "mc",
+    "questionText": "Which of the following options is used in a GRUB Legacy configuration file to define the amount of time that the GRUB menu will be shown to the user?",
+    "answers": [
+      { "id": 1, "answerText": "hidemenu", "isCorrect": false},
+      { "id": 2, "answerText": "splash", "isCorrect": false},
+      { "id": 3, "answerText": "timeout", "isCorrect": true},
+      { "id": 4, "answerText": "showmenu", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 39,
+    "type": "sc",
+    "questionText": "When starting a program with the nice command without any additional parameters, which nice level is set for the resulting process?",
+    "answers": [
+      { "id": 1, "answerText": "-10", "isCorrect": false},
+      { "id": 2, "answerText": "0", "isCorrect": false},
+      { "id": 3, "answerText": "10", "isCorrect": true},
+      { "id": 4, "answerText": "20", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 40,
+    "type": "sc",
+    "questionText": "Which of the following statements is correct regarding the command foo 1> bar?",
+    "answers": [
+      { "id": 1, "answerText": "The stdout from the command foo is appended to the file bar.", "isCorrect": false},
+      { "id": 2, "answerText": "The stdout from the command foo overwrites the file bar.", "isCorrect": true},
+      { "id": 3, "answerText": "The command foo receives its stdin from the file bar.", "isCorrect": false},
+      { "id": 4, "answerText": "The command foo receives its stdin from the stdout of the command bar.", "isCorrect": false},
+      { "id": 5, "answerText": "The stderr from the command foo is saved to the file bar.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 41,
+    "type": "sc",
+    "questionText": "In compliance with the FHS, in which of the directories are man pages found?",
+    "answers": [
+      { "id": 1, "answerText": "/usr/share/man", "isCorrect": true},
+      { "id": 2, "answerText": "/opt/man", "isCorrect": false},
+      { "id": 3, "answerText": "/usr/doc/", "isCorrect": false},
+      { "id": 4, "answerText": "/var/pkg/man", "isCorrect": false},
+      { "id": 5, "answerText": "/var/man", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 42,
+    "type": "sc",
+    "questionText": "Which of the following commands will send output from the program myapp to both standard output (stdout) and the file file1.log?",
+    "answers": [
+      { "id": 1, "answerText": "cat < myapp | cat > file1.log", "isCorrect": false},
+      { "id": 2, "answerText": "myapp 0>&1 | cat > file1.log", "isCorrect": false},
+      { "id": 3, "answerText": "myapp | cat > file1.log", "isCorrect": false},
+      { "id": 4, "answerText": "myapp | tee file1.log", "isCorrect": true},
+      { "id": 5, "answerText": "tee myapp file1.log", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 43,
+    "type": "sc",
+    "questionText": "What is the default nice level when a process is started using the nice command?",
+    "answers": [
+      { "id": 1, "answerText": "-10", "isCorrect": false},
+      { "id": 2, "answerText": "10", "isCorrect": true},
+      { "id": 3, "answerText": "20", "isCorrect": false},
+      { "id": 4, "answerText": "0", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 44,
+    "type": "fi",
+    "questionText": "Which command is used in a Linux environment to create a new directory? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "mkdir", "isCorrect": true },
+      { "id": 2, "answerText": "/usr/bin/mkdir", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 45,
+    "type": "sc",
+    "questionText": "Which of the following signals is sent to a process when the key combination CTRL+C is pressed on the keyboard?",
+    "answers": [
+      { "id": 1, "answerText": "SIGTERM", "isCorrect": false},
+      { "id": 2, "answerText": "SIGINT", "isCorrect": true},
+      { "id": 3, "answerText": "SIGSTOP", "isCorrect": false},
+      { "id": 4, "answerText": "SIGKILL", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 46,
+    "type": "sc",
+    "questionText": "What command will generate a list of user names from /etc/passwd along with their login shell?",
+    "answers": [
+      { "id": 1, "answerText": "column -s : 1,7 /etc/passwd", "isCorrect": false},
+      { "id": 2, "answerText": "chop -c 1,7 /etc/passwd", "isCorrect": false},
+      { "id": 3, "answerText": "colrm 1,7 /etc/passwd", "isCorrect": false},
+      { "id": 4, "answerText": "cut -d: -f1,7 /etc/passwd", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 47,
+    "type": "sc",
+    "questionText": "Regarding the command: nice -5 /usr/bin/prog Which of the following statements is correct?",
+    "answers": [
+      { "id": 1, "answerText": "/usr/bin/prog is executed with a nice level of -5.", "isCorrect": false},
+      { "id": 2, "answerText": "/usr/bin/prog is executed with a nice level of 5.", "isCorrect": true},
+      { "id": 3, "answerText": "/usr/bin/prog is executed with a priority of -5.", "isCorrect": false},
+      { "id": 4, "answerText": "/usr/bin/prog is executed with a priority of 5.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 48,
+    "type": "sc",
+    "questionText": "When running the command sed -e \"s/a/b/\" /tmp/file >/tmp/file While /tmp/file contains data, why is /tmp/file empty afterwards?",
+    "answers": [
+      { "id": 1, "answerText": "The file order is incorrect. The destination file must be mentioned before the command to ensure redirection.", "isCorrect": false},
+      { "id": 2, "answerText": "The command sed did not match anything in that file therefore the output is empty.", "isCorrect": false},
+      { "id": 3, "answerText": "When the shell establishes the redirection it overwrites the target file before the redirected command starts and opens it for reading.", "isCorrect": true},
+      { "id": 4, "answerText": "Redirection for shell commands do not work using the > character. It only works using the | character instead.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 49,
+    "type": "mc",
+    "questionText": "Which of the following commands prints all files and directories within the /tmp directory or its subdirectories which are also owned by the user root? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "find /tmp -uid root -print", "isCorrect": false},
+      { "id": 2, "answerText": "find -path /tmp -uid root", "isCorrect": false},
+      { "id": 3, "answerText": "find /tmp -user root -print", "isCorrect": true},
+      { "id": 4, "answerText": "find /tmp -user root", "isCorrect": true},
+      { "id": 5, "answerText": "find -path /tmp -user root –print", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 50,
+    "type": "sc",
+    "questionText": "In the vi editor, how can commands such as moving the cursor or copying lines into the buffer be issued multiple times or applied to multiple rows?",
+    "answers": [
+      { "id": 1, "answerText": "By using the command :repeat followed by the number and the command.", "isCorrect": false},
+      { "id": 2, "answerText": "By specifying the number right in front of a command such as 4l or 2yj.", "isCorrect": true},
+      { "id": 3, "answerText": "By selecting all affected lines using the shift and cursor keys before applying the command.", "isCorrect": false},
+      { "id": 4, "answerText": "By issuing a command such as :set repetition=4 which repeats every subsequent command 4 times.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 51,
+    "type": "sc",
+    "questionText": "What is the output of the following command? echo \"Hello World\" | tr -d aieou",
+    "answers": [
+      { "id": 1, "answerText": "Hello World", "isCorrect": false},
+      { "id": 2, "answerText": "eoo", "isCorrect": false},
+      { "id": 3, "answerText": "Hll Wrld", "isCorrect": true},
+      { "id": 4, "answerText": "eoo Hll Wrld", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 52,
+    "type": "sc",
+    "questionText": "Which of the following shell redirections will write standard output and standard error output to a file named filename?",
+    "answers": [
+      { "id": 1, "answerText": "2>&1 >filename", "isCorrect": false},
+      { "id": 2, "answerText": ">filename 2>&1", "isCorrect": true},
+      { "id": 3, "answerText": "1>&2>filename", "isCorrect": false},
+      { "id": 4, "answerText": ">>filename", "isCorrect": false},
+      { "id": 5, "answerText": "1&2>filename", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 53,
+    "type": "sc",
+    "questionText": "Which of the following commands is used to change options and positional parameters for a running Bash?",
+    "answers": [
+      { "id": 1, "answerText": "history", "isCorrect": false},
+      { "id": 2, "answerText": "set", "isCorrect": true},
+      { "id": 3, "answerText": "bashconf", "isCorrect": false},
+      { "id": 4, "answerText": "setsh", "isCorrect": false},
+      { "id": 5, "answerText": "envsetup", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 54,
+    "type": "sc",
+    "questionText": "Which of the following commands displays the contents of a gzip compressed tar archive?",
+    "answers": [
+      { "id": 1, "answerText": "gzip archive.tgz | tar xvf -", "isCorrect": false},
+      { "id": 2, "answerText": "tar ztf archive.tgz", "isCorrect": true},
+      { "id": 3, "answerText": "gzip -d archive.tgz | tar tvf -", "isCorrect": false},
+      { "id": 4, "answerText": "tar cf archive.tgz", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 55,
+    "type": "sc",
+    "questionText": "Which of the following characters can be combined with a separator string in order to read from the current input source until the separator string, which is on a separate line and without any trailing spaces, is reached?",
+    "answers": [
+      { "id": 1, "answerText": "<<", "isCorrect": true},
+      { "id": 2, "answerText": "<|", "isCorrect": false},
+      { "id": 3, "answerText": "!<", "isCorrect": false},
+      { "id": 4, "answerText": "&<", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 56,
+    "type": "sc",
+    "questionText": "What is the effect of the egrep command when the -v option is used?",
+    "answers": [
+      { "id": 1, "answerText": "It enables color to highlight matching parts.", "isCorrect": false},
+      { "id": 2, "answerText": "It only outputs non-matching lines.", "isCorrect": true},
+      { "id": 3, "answerText": "It shows the command's version information.", "isCorrect": false},
+      { "id": 4, "answerText": "It changes the output order showing the last matching line first.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 57,
+    "type": "sc",
+    "questionText": "What is the purpose of the Bash built-in export command?",
+    "answers": [
+      { "id": 1, "answerText": "It allows disks to be mounted remotely.", "isCorrect": false},
+      { "id": 2, "answerText": "It runs a command as a process in a subshell.", "isCorrect": false},
+      { "id": 3, "answerText": "It makes the command history available to subshells.", "isCorrect": false},
+      { "id": 4, "answerText": "It sets up environment variables for applications.", "isCorrect": true},
+      { "id": 5, "answerText": "It shares NFS partitions for use by other systems on the network.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 58,
+    "type": "sc",
+    "questionText": "Which of the following commands determines the type of a file by using a definition database file which contains information about all common file types?",
+    "answers": [
+      { "id": 1, "answerText": "magic", "isCorrect": false},
+      { "id": 2, "answerText": "type", "isCorrect": false},
+      { "id": 3, "answerText": "file", "isCorrect": true},
+      { "id": 4, "answerText": "pmagic", "isCorrect": false},
+      { "id": 5, "answerText": "hash", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 59,
+    "type": "sc",
+    "questionText": "Which of the following commands can be used to create a USB storage media from a disk image?",
+    "answers": [
+      { "id": 1, "answerText": "gdisk", "isCorrect": false},
+      { "id": 2, "answerText": "dd", "isCorrect": true},
+      { "id": 3, "answerText": "cc", "isCorrect": false},
+      { "id": 4, "answerText": "fdisk", "isCorrect": false},
+      { "id": 5, "answerText": "mount", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 60,
+    "type": "sc",
+    "questionText": "What is the maximum niceness value that a regular user can assign to a process with the nice command when executing a new process?",
+    "answers": [
+      { "id": 1, "answerText": "9", "isCorrect": false},
+      { "id": 2, "answerText": "19", "isCorrect": true},
+      { "id": 3, "answerText": "49", "isCorrect": false},
+      { "id": 4, "answerText": "99", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 61,
+    "type": "fi",
+    "questionText": "Which signal is missing from the following command that is commonly used to instruct a daemon to reinitialize itself, including reading configuration files? killall -s _______ daemon",
+    "answers": [
+      { "id": 1, "answerText": "HUP", "isCorrect": true },
+      { "id": 2, "answerText": "SIGHUP", "isCorrect": true },
+      { "id": 3, "answerText": "1", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 62,
+    "type": "sc",
+    "questionText": "In a nested directory structure, which find command line option would be used to restrict the command to searching down a particular number of subdirectories?",
+    "answers": [
+      { "id": 1, "answerText": "-dirmax", "isCorrect": false},
+      { "id": 2, "answerText": "-maxdepth", "isCorrect": true},
+      { "id": 3, "answerText": "-maxlevels", "isCorrect": false},
+      { "id": 4, "answerText": "-n", "isCorrect": false},
+      { "id": 5, "answerText": "-s", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 63,
+    "type": "mc",
+    "questionText": "From a Bash shell, which of the following commands directly executes the instruction from the file /usr/local/bin/runme.sh without starting a subshell? (Please select TWO answers.)",
+    "answers": [
+      { "id": 1, "answerText": "source /usr/local/bin/runme.sh", "isCorrect": true},
+      { "id": 2, "answerText": ". /usr/local/bin/runme.sh", "isCorrect": true},
+      { "id": 3, "answerText": "/bin/bash /usr/local/bin/runme.sh", "isCorrect": false},
+      { "id": 4, "answerText": "/usr/local/bin/runme.sh", "isCorrect": false},
+      { "id": 5, "answerText": "run /usr/local/bin/runme.sh", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 64,
+    "type": "sc",
+    "questionText": "Which of the following commands will NOT update the modify timestamp on the file /tmp/myfile.txt?",
+    "answers": [
+      { "id": 1, "answerText": "file /tmp/myfile.txt", "isCorrect": true},
+      { "id": 2, "answerText": "echo \"Hello\" >/tmp/myfile.txt", "isCorrect": false},
+      { "id": 3, "answerText": "sed -ie \"s/1/2/\" /tmp/myfile.txt", "isCorrect": false},
+      { "id": 4, "answerText": "echo -n \"Hello\" >>/tmp/myfile.txt", "isCorrect": false},
+      { "id": 5, "answerText": "touch /tmp/myfile.txt", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 65,
+    "type": "sc",
+    "questionText": "What is the difference between the i and a commands of the vi editor?",
+    "answers": [
+      { "id": 1, "answerText": "i (interactive) requires the user to explicitly switch between vi modes whereas a (automatic) switches modes automatically.", "isCorrect": false},
+      { "id": 2, "answerText": "i (insert) inserts text before the current cursor position whereas a (append) inserts text after the cursor.", "isCorrect": true},
+      { "id": 3, "answerText": "i (independent rows) starts every new line at the first character whereas a (aligned rows) keeps the indentation of the previous line.", "isCorrect": false},
+      { "id": 4, "answerText": "i (interrupt) temporarily suspends editing of a file to the background whereas a (abort) terminates editing.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 66,
+    "type": "sc",
+    "questionText": "What is the default action of the split command on an input file?",
+    "answers": [
+      { "id": 1, "answerText": "It will break the file into new files of 1,024 byte pieces each.", "isCorrect": false},
+      { "id": 2, "answerText": "It will break the file into new files of 1,000 line pieces each.", "isCorrect": true},
+      { "id": 3, "answerText": "It will break the file into new files of 1,024 kilobyte pieces each.", "isCorrect": false},
+      { "id": 4, "answerText": "It will break the file into new files that are no more than 5% of the size of the original file.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 67,
+    "type": "sc",
+    "questionText": "Which variable defines the directories in which a Bash shell searches for executable commands?",
+    "answers": [
+      { "id": 1, "answerText": "BASHEXEC", "isCorrect": false},
+      { "id": 2, "answerText": "BASHRC", "isCorrect": false},
+      { "id": 3, "answerText": "PATH", "isCorrect": true},
+      { "id": 4, "answerText": "EXECPATH", "isCorrect": false},
+      { "id": 5, "answerText": "PATHRC", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 68,
+    "type": "sc",
+    "questionText": "Which of the following command sets the Bash variable named TEST with the content FOO?",
+    "answers": [
+      { "id": 1, "answerText": "set TEST=\"FOO\"", "isCorrect": false},
+      { "id": 2, "answerText": "TEST = \"FOO\"", "isCorrect": false},
+      { "id": 3, "answerText": "var TEST=\"FOO\"", "isCorrect": false},
+      { "id": 4, "answerText": "TEST=\"FOO\"", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 69,
+    "type": "sc",
+    "questionText": "What does the ? symbol within regular expressions represent?",
+    "answers": [
+      { "id": 1, "answerText": "Match the preceding qualifier one or more times.", "isCorrect": false},
+      { "id": 2, "answerText": "Match the preceding qualifier zero or more times.", "isCorrect": false},
+      { "id": 3, "answerText": "Match the preceding qualifier zero or one times.", "isCorrect": true},
+      { "id": 4, "answerText": "Match a literal ? character.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 70,
+    "type": "sc",
+    "questionText": "Which of the following commands prints a list of usernames (first column) and their primary group (fourth column) from the /etc/passwd file?",
+    "answers": [
+      { "id": 1, "answerText": "fmt -f 1,4 /etc/passwd", "isCorrect": false},
+      { "id": 2, "answerText": "split -c 1,4 /etc/passwd", "isCorrect": false},
+      { "id": 3, "answerText": "cut -d : -f 1,4 /etc/passwd", "isCorrect": true},
+      { "id": 4, "answerText": "paste -f 1,4 /etc/passwd", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 71,
+    "type": "sc",
+    "questionText": "Which of the following commands moves and resumes in the background the last stopped shell job?",
+    "answers": [
+      { "id": 1, "answerText": "run", "isCorrect": false},
+      { "id": 2, "answerText": "bg", "isCorrect": true},
+      { "id": 3, "answerText": "fg", "isCorrect": false},
+      { "id": 4, "answerText": "back", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 72,
+    "type": "sc",
+    "questionText": "In the vi editor, which of the following commands will copy the current line into the vi buffer?",
+    "answers": [
+      { "id": 1, "answerText": "c", "isCorrect": false},
+      { "id": 2, "answerText": "cc", "isCorrect": false},
+      { "id": 3, "answerText": "1c", "isCorrect": false},
+      { "id": 4, "answerText": "yy", "isCorrect": true},
+      { "id": 5, "answerText": "1y", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 73,
+    "type": "mc",
+    "questionText": "Which of the following sequences in the vi editor saves the opened document and exits the editor? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "esc ZZ", "isCorrect": true},
+      { "id": 2, "answerText": "ctrl :w!", "isCorrect": false},
+      { "id": 3, "answerText": "esc zz", "isCorrect": false},
+      { "id": 4, "answerText": "esc :wq!", "isCorrect": true},
+      { "id": 5, "answerText": "ctrl XX", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 74,
+    "type": "mc",
+    "questionText": "Which of the following commands can be used to determine how long the system has been running? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "uptime", "isCorrect": true},
+      { "id": 2, "answerText": "up", "isCorrect": false},
+      { "id": 3, "answerText": "top", "isCorrect": true},
+      { "id": 4, "answerText": "uname -u", "isCorrect": false},
+      { "id": 5, "answerText": "time –up", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 75,
+    "type": "sc",
+    "questionText": "Which of the following files, located in the user home directory, is used to store the Bash history?",
+    "answers": [
+      { "id": 1, "answerText": ".bash_history", "isCorrect": true},
+      { "id": 2, "answerText": ".bash_histfile", "isCorrect": false},
+      { "id": 3, "answerText": ".history", "isCorrect": false},
+      { "id": 4, "answerText": ".bashrc_history", "isCorrect": false},
+      { "id": 5, "answerText": ".history_bash", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 76,
+    "type": "sc",
+    "questionText": "Immediately after deleting 3 lines of text in vi and moving the cursor to a different line, which single character command will insert the deleted content below the current line?",
+    "answers": [
+      { "id": 1, "answerText": "i (lowercase)", "isCorrect": false},
+      { "id": 2, "answerText": "P (uppercase)", "isCorrect": false},
+      { "id": 3, "answerText": "p (lowercase)", "isCorrect": true},
+      { "id": 4, "answerText": "U (uppercase)", "isCorrect": false},
+      { "id": 5, "answerText": "u (lowercase)", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 77,
+    "type": "sc",
+    "questionText": "When given the following command line. echo \"foo bar\" | tee bar | cat Which of the following output is created?",
+    "answers": [
+      { "id": 1, "answerText": "cat", "isCorrect": false},
+      { "id": 2, "answerText": "foo bar", "isCorrect": true},
+      { "id": 3, "answerText": "tee bar", "isCorrect": false},
+      { "id": 4, "answerText": "bar", "isCorrect": false},
+      { "id": 5, "answerText": "foo", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 78,
+    "type": "sc",
+    "questionText": "Which of the following commands replaces each occurrence of 'bob' in the file letter with 'Bob' and writes the result to the file newletter?",
+    "answers": [
+      { "id": 1, "answerText": "sed '/bob/Bob' letter > newletter", "isCorrect": false},
+      { "id": 2, "answerText": "sed s/bob/Bob/ letter < newletter", "isCorrect": false},
+      { "id": 3, "answerText": "sed 's/bob/Bob' letter > newletter", "isCorrect": false},
+      { "id": 4, "answerText": "sed 's/bob/Bob/g' letter > newletter", "isCorrect": true},
+      { "id": 5, "answerText": "sed 's/bob, Bob/' letter > newletter", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 79,
+    "type": "sc",
+    "questionText": "A user accidentally created the subdirectory \\dir in his home directory. Which of the following commands will remove that directory?",
+    "answers": [
+      { "id": 1, "answerText": "rmdir '~/\\dir'", "isCorrect": false},
+      { "id": 2, "answerText": "rmdir \"~/\\dir\"", "isCorrect": false},
+      { "id": 3, "answerText": "rmdir ~/'\\dir'", "isCorrect": false},
+      { "id": 4, "answerText": "rmdir ~/\\dir", "isCorrect": false},
+      { "id": 5, "answerText": "rmdir ~/\\dir", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 80,
+    "type": "sc",
+    "questionText": "Which of the following commands kills the process with the PID 123 but allows the process to \"clean up\" before exiting?",
+    "answers": [
+      { "id": 1, "answerText": "kill -PIPE 123", "isCorrect": false},
+      { "id": 2, "answerText": "kill -KILL 123", "isCorrect": false},
+      { "id": 3, "answerText": "kill -STOP 123", "isCorrect": false},
+      { "id": 4, "answerText": "kill -TERM 123", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 81,
+    "type": "fi",
+    "questionText": "Which command displays a list of all background tasks running in the current shell? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "jobs", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 82,
+    "type": "mc",
+    "questionText": "Which of the following are valid stream redirection operators within Bash? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "<", "isCorrect": true},
+      { "id": 2, "answerText": "<<<", "isCorrect": true},
+      { "id": 3, "answerText": ">", "isCorrect": true},
+      { "id": 4, "answerText": ">>>", "isCorrect": false},
+      { "id": 5, "answerText": "%>", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 83,
+    "type": "sc",
+    "questionText": "What happens after issuing the command vi without any additional parameters?",
+    "answers": [
+      { "id": 1, "answerText": "vi starts and loads the last file used and moves the cursor to the position where vi was when it last exited.", "isCorrect": false},
+      { "id": 2, "answerText": "vi starts and requires the user to explicitly either create a new or load an existing file.", "isCorrect": false},
+      { "id": 3, "answerText": "vi exits with an error message as it cannot be invoked without a file name to operate on.", "isCorrect": false},
+      { "id": 4, "answerText": "vi starts in command mode and opens a new empty file.", "isCorrect": true},
+      { "id": 5, "answerText": "vi starts and opens a new file which is filled with the content of the vi buffer if the buffer contains text.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 84,
+    "type": "sc",
+    "questionText": "Which grep command will print only the lines that do not end with a / in the file foo?",
+    "answers": [
+      { "id": 1, "answerText": "grep '/$' foo", "isCorrect": false},
+      { "id": 2, "answerText": "grep '/#' foo", "isCorrect": false},
+      { "id": 3, "answerText": "grep -v '/$' foo", "isCorrect": true},
+      { "id": 4, "answerText": "grep -v '/#' foo", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 85,
+    "type": "sc",
+    "questionText": "Which of the following commands will reduce all consecutive spaces down to a single space?",
+    "answers": [
+      { "id": 1, "answerText": "tr 's' ' ' < a.txt > b.txt", "isCorrect": false},
+      { "id": 2, "answerText": "tr -c ' ' < a.txt > b.txt", "isCorrect": false},
+      { "id": 3, "answerText": "tr -d ' ' < a.txt > b.txt", "isCorrect": false},
+      { "id": 4, "answerText": "tr -r ' ' 'n' < a.txt > b.txt", "isCorrect": false},
+      { "id": 5, "answerText": "tr -s ' ' < a.txt > b.txt", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 86,
+    "type": "sc",
+    "questionText": "Which shell command is used to continue background execution of a suspended command?",
+    "answers": [
+      { "id": 1, "answerText": "&", "isCorrect": false},
+      { "id": 2, "answerText": "bg", "isCorrect": true},
+      { "id": 3, "answerText": "cont", "isCorrect": false},
+      { "id": 4, "answerText": "exec", "isCorrect": false},
+      { "id": 5, "answerText": ":&", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 87,
+    "type": "sc",
+    "questionText": "Which of the following commands will print the last 10 lines of a text file to the standard output?",
+    "answers": [
+      { "id": 1, "answerText": "cat -n 10 filename", "isCorrect": false},
+      { "id": 2, "answerText": "dump -n 10 filename", "isCorrect": false},
+      { "id": 3, "answerText": "head -n 10 filename", "isCorrect": false},
+      { "id": 4, "answerText": "tail -n 10 filename", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 88,
+    "type": "fi",
+    "questionText": "Which Bash environment variable defines in which file the user history is stored when exiting a Bash process? (Specify ONLY the variable name.)",
+    "answers": [
+      { "id": 1, "answerText": "HISTFILE", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 89,
+    "type": "sc",
+    "questionText": "In Bash, inserting 1>&2 after a command redirects",
+    "answers": [
+      { "id": 1, "answerText": "standard error to standard input.", "isCorrect": false},
+      { "id": 2, "answerText": "standard input to standard error.", "isCorrect": false},
+      { "id": 3, "answerText": "standard output to standard error.", "isCorrect": true},
+      { "id": 4, "answerText": "standard error to standard output.", "isCorrect": false},
+      { "id": 5, "answerText": "standard output to standard input.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 90,
+    "type": "mc",
+    "questionText": "Which character, added to the end of a command, runs that command in the background as a child process of the current shell?",
+    "answers": [
+      { "id": 1, "answerText": "!", "isCorrect": false},
+      { "id": 2, "answerText": "+", "isCorrect": false},
+      { "id": 3, "answerText": "&", "isCorrect": true},
+      { "id": 4, "answerText": "%", "isCorrect": true},
+      { "id": 5, "answerText": "#", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 91,
+    "type": "sc",
+    "questionText": "Which of the following commands can be used to search for the executable file foo when it has been placed in a directory not included in $PATH?",
+    "answers": [
+      { "id": 1, "answerText": "apropos", "isCorrect": false},
+      { "id": 2, "answerText": "which", "isCorrect": false},
+      { "id": 3, "answerText": "find", "isCorrect": true},
+      { "id": 4, "answerText": "query", "isCorrect": false},
+      { "id": 5, "answerText": "whereis", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 92,
+    "type": "mc",
+    "questionText": "In order to display all currently mounted filesystems, which of the following commands could be used? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "cat /proc/self/mounts", "isCorrect": true},
+      { "id": 2, "answerText": "free", "isCorrect": false},
+      { "id": 3, "answerText": "mount", "isCorrect": true},
+      { "id": 4, "answerText": "lsmounts", "isCorrect": false},
+      { "id": 5, "answerText": "cat /proc/filesystems", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 93,
+    "type": "sc",
+    "questionText": "Which of the following is the device file name for the second partition on the only SCSI drive?",
+    "answers": [
+      { "id": 1, "answerText": "/dev/hda1", "isCorrect": false},
+      { "id": 2, "answerText": "/dev/sda2", "isCorrect": true},
+      { "id": 3, "answerText": "/dev/sd0a2", "isCorrect": false},
+      { "id": 4, "answerText": "/dev/sd1p2", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 94,
+    "type": "mc",
+    "questionText": "Instead of supplying an explicit device in /etc/fstab for mounting, what other options may be used to identify the intended partition? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "FIND", "isCorrect": false},
+      { "id": 2, "answerText": "ID", "isCorrect": false},
+      { "id": 3, "answerText": "LABEL", "isCorrect": true},
+      { "id": 4, "answerText": "NAME", "isCorrect": false},
+      { "id": 5, "answerText": "UUID", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 95,
+    "type": "sc",
+    "questionText": "Which of the following settings for umask ensures that new files have the default permissions -rw-r----- ?",
+    "answers": [
+      { "id": 1, "answerText": "0017", "isCorrect": false},
+      { "id": 2, "answerText": "0640", "isCorrect": false},
+      { "id": 3, "answerText": "0038", "isCorrect": false},
+      { "id": 4, "answerText": "0027", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 96,
+    "type": "sc",
+    "questionText": "Which of the following pieces of information of an existing file is changed when a hard link pointing to that file is created?",
+    "answers": [
+      { "id": 1, "answerText": "File size", "isCorrect": false},
+      { "id": 2, "answerText": "Modify timestamp", "isCorrect": false},
+      { "id": 3, "answerText": "Link count", "isCorrect": true},
+      { "id": 4, "answerText": "Inode number", "isCorrect": false},
+      { "id": 5, "answerText": "Permissions", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 97,
+    "type": "sc",
+    "questionText": "Which type of filesystem is created by mkfs when it is executed with the block device name only and without any additional parameters?",
+    "answers": [
+      { "id": 1, "answerText": "ext2", "isCorrect": true},
+      { "id": 2, "answerText": "ext3", "isCorrect": false},
+      { "id": 3, "answerText": "ext4", "isCorrect": false},
+      { "id": 4, "answerText": "XFS", "isCorrect": false},
+      { "id": 5, "answerText": "VFAT", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 98,
+    "type": "sc",
+    "questionText": "Which of the following commands can be used to locate programs and their corresponding man pages and configuration files?",
+    "answers": [
+      { "id": 1, "answerText": "dirname", "isCorrect": false},
+      { "id": 2, "answerText": "which", "isCorrect": false},
+      { "id": 3, "answerText": "basename", "isCorrect": false},
+      { "id": 4, "answerText": "query", "isCorrect": false},
+      { "id": 5, "answerText": "whereis", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 99,
+    "type": "fi",
+    "questionText": "Which umask value will result in the default access permissions of 600 (rw-------) for files and 700 (rwx------) for directories? (Specify only the numerical umask value.)",
+    "answers": [
+      { "id": 1, "answerText": "0077", "isCorrect": true },
+      { "id": 2, "answerText": "077", "isCorrect": true }
+    ],
+    "hint": ""
+  },
+  {
+    "id": 100,
+    "type": "sc",
+    "questionText": "Which of the following commands changes the number of days before the ext3 filesystem on /dev/sda1 has to run through a full filesystem check while booting?",
+    "answers": [
+      { "id": 1, "answerText": "tune2fs -d 200 /dev/sda1", "isCorrect": false},
+      { "id": 2, "answerText": "tune2fs -c 200 /dev/sda1", "isCorrect": false},
+      { "id": 3, "answerText": "tune2fs -i 200 /dev/sda1", "isCorrect": true},
+      { "id": 4, "answerText": "tune2fs -n 200 /dev/sda1", "isCorrect": false},
+      { "id": 5, "answerText": "tune2fs --days 200 /dev/sda1", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 101,
+    "type": "sc",
+    "questionText": "After running the command umount /mnt, the following error message is displayed: umount: /mnt: device is busy. What is a common reason for this message?",
+    "answers": [
+      { "id": 1, "answerText": "The kernel has not finished flushing disk writes to the mounted device.", "isCorrect": false},
+      { "id": 2, "answerText": "A user has a file open in the /mnt directory.", "isCorrect": true},
+      { "id": 3, "answerText": "Another file system still contains a symlink to a file inside /mnt.", "isCorrect": false},
+      { "id": 4, "answerText": "The files in /mnt have been scanned and added to the locate database.", "isCorrect": false},
+      { "id": 5, "answerText": "The kernel thinks that a process is about to open a file in /mnt for reading.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 102,
+    "type": "sc",
+    "questionText": "How many fields are in a syntactically correct line of /etc/fstab?",
+    "answers": [
+      { "id": 1, "answerText": "3", "isCorrect": false},
+      { "id": 2, "answerText": "4", "isCorrect": false},
+      { "id": 3, "answerText": "5", "isCorrect": false},
+      { "id": 4, "answerText": "6", "isCorrect": true},
+      { "id": 5, "answerText": "7", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 103,
+    "type": "sc",
+    "questionText": "After successfully creating a hard link called bar to the ordinary file foo, foo is deleted from the filesystem. Which of the following describes the resulting situation?",
+    "answers": [
+      { "id": 1, "answerText": "foo and bar would both be removed.", "isCorrect": false},
+      { "id": 2, "answerText": "foo would be removed while bar would remain accessible.", "isCorrect": true},
+      { "id": 3, "answerText": "foo would be removed. bar would still exist but would be unusable.", "isCorrect": false},
+      { "id": 4, "answerText": "Both foo and bar would remain accessible.", "isCorrect": false},
+      { "id": 5, "answerText": "The user is prompted whether bar should be removed, too.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 104,
+    "type": "mc",
+    "questionText": "Which of the following Linux filesystems preallocates a fixed number of inodes at the filesystem's make/creation time and does NOT generate them as needed? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "ext3", "isCorrect": true},
+      { "id": 2, "answerText": "JFS", "isCorrect": false},
+      { "id": 3, "answerText": "ext2", "isCorrect": true},
+      { "id": 4, "answerText": "XFS", "isCorrect": false},
+      { "id": 5, "answerText": "procfs", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 105,
+    "type": "sc",
+    "questionText": "What does the command mount -a do?",
+    "answers": [
+      { "id": 1, "answerText": "It ensures that all file systems listed with the option noauto in /etc/fstab are mounted.", "isCorrect": false},
+      { "id": 2, "answerText": "It shows all mounted file systems that have been automatically mounted.", "isCorrect": false},
+      { "id": 3, "answerText": "It opens an editor with root privileges and loads /etc/fstab for editing.", "isCorrect": false},
+      { "id": 4, "answerText": "It ensures that all file systems listed with the option auto in /etc/fstab are mounted.", "isCorrect": true},
+      { "id": 5, "answerText": "It ensures that all file systems listed in /etc/fstab are mounted regardless of their options.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 106,
+    "type": "sc",
+    "questionText": "Which of the following commands changes the ownership of file.txt to the user dan and the group staff?",
+    "answers": [
+      { "id": 1, "answerText": "chown dan/staff file.txt", "isCorrect": false},
+      { "id": 2, "answerText": "chown dan:staff file.txt", "isCorrect": true},
+      { "id": 3, "answerText": "chown -u dan -g staff file.txt", "isCorrect": false},
+      { "id": 4, "answerText": "chown dan -g staff file.txt", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 107,
+    "type": "sc",
+    "questionText": "Which of the following commands shows the definition of a given shell command?",
+    "answers": [
+      { "id": 1, "answerText": "where", "isCorrect": false},
+      { "id": 2, "answerText": "stat", "isCorrect": false},
+      { "id": 3, "answerText": "type", "isCorrect": true},
+      { "id": 4, "answerText": "case", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 108,
+    "type": "sc",
+    "questionText": "What do the permissions -rwSr-xr-x mean for a binary file when it is executed as a command?",
+    "answers": [
+      { "id": 1, "answerText": "The command is SetUID and it will be executed with the effective rights of the owner.", "isCorrect": false},
+      { "id": 2, "answerText": "The command will be executed with the effective rights of the group instead of the owner.", "isCorrect": false},
+      { "id": 3, "answerText": "The execute flag is not set for the owner. Therefore the SetUID flag is ignored.", "isCorrect": true},
+      { "id": 4, "answerText": "The command will be executed with the effective rights of the owner and group.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 109,
+    "type": "sc",
+    "questionText": "What does the command mount -a do?",
+    "answers": [
+      { "id": 1, "answerText": "It mounts all available filesystems onto the current directory.", "isCorrect": false},
+      { "id": 2, "answerText": "It shows all mounted filesystems.", "isCorrect": false},
+      { "id": 3, "answerText": "It mounts all user mountable filesystems for the current user.", "isCorrect": false},
+      { "id": 4, "answerText": "It mounts all filesystems listed in /etc/fstab which have the option auto set.", "isCorrect": true},
+      { "id": 5, "answerText": "It mounts all filesystems listed in /etc/fstab which have the option noauto set.", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 110,
+    "type": "sc",
+    "questionText": "What is the purpose of the Filesystem Hierarchy Standard?",
+    "answers": [
+      { "id": 1, "answerText": "It is a security model used to ensure files are organized according to their permissions and accessibility.", "isCorrect": false},
+      { "id": 2, "answerText": "It provides unified tools to create, maintain and manage multiple filesystems in a common way.", "isCorrect": false},
+      { "id": 3, "answerText": "It defines a common internal structure of inodes for all compliant filesystems.", "isCorrect": false},
+      { "id": 4, "answerText": "It is a distribution neutral description of locations of files and directories.", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 111,
+    "type": "sc",
+    "questionText": "Which utility would be used to change how often a filesystem check is performed on an ext2 filesystem without losing any data stored on that filesystem?",
+    "answers": [
+      { "id": 1, "answerText": "mod2fs", "isCorrect": false},
+      { "id": 2, "answerText": "fsck", "isCorrect": false},
+      { "id": 3, "answerText": "tune2fs", "isCorrect": true},
+      { "id": 4, "answerText": "mke2fs", "isCorrect": false},
+      { "id": 5, "answerText": "fixe2fs", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 112,
+    "type": "sc",
+    "questionText": "Which of the following commands makes /bin/foo executable by everyone but writable only by its owner?",
+    "answers": [
+      { "id": 1, "answerText": "chmod u=rwx,go=rx /bin/foo", "isCorrect": true},
+      { "id": 2, "answerText": "chmod o+rwx,a+rx /bin/foo", "isCorrect": false},
+      { "id": 3, "answerText": "chmod 577 /bin/foo", "isCorrect": false},
+      { "id": 4, "answerText": "chmod 775 /bin/foo", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 113,
+    "type": "mc",
+    "questionText": "After moving data to a new filesystem, how can the former path of the data be kept intact in order to avoid reconfiguration of existing applications? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "By creating an ACL redirection from the old to the new path of the data.", "isCorrect": false},
+      { "id": 2, "answerText": "By creating a hard link from the old to the new path of the data.", "isCorrect": false},
+      { "id": 3, "answerText": "By creating a symbolic link from the old to the new path of the data.", "isCorrect": true},
+      { "id": 4, "answerText": "By running the command touch on the old path.", "isCorrect": false},
+      { "id": 5, "answerText": "By mounting the new filesystem on the original path of the data.", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 114,
+    "type": "mc",
+    "questionText": "Which of the following commands creates an ext3 filesystem on /dev/sdb1? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "/sbin/mke2fs -j /dev/sdb1", "isCorrect": true},
+      { "id": 2, "answerText": "/sbin/mkfs -t ext3 /dev/sdb1", "isCorrect": true},
+      { "id": 3, "answerText": "/sbin/mkfs -c ext3 /dev/sdb1", "isCorrect": false},
+      { "id": 4, "answerText": "/sbin/mke3fs -j /dev/sdb1", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 115,
+    "type": "mc",
+    "questionText": "Which of the following commands set the sticky bit for the directory /tmp? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "chmod +s /tmp", "isCorrect": false},
+      { "id": 2, "answerText": "chmod +t /tmp", "isCorrect": true},
+      { "id": 3, "answerText": "chmod 1775 /tmp", "isCorrect": true},
+      { "id": 4, "answerText": "chmod 4775 /tmp", "isCorrect": false},
+      { "id": 5, "answerText": "chmod 2775 /tmp", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 116,
+    "type": "sc",
+    "questionText": "Which of the following commands can be used to display the inode number of a given file?",
+    "answers": [
+      { "id": 1, "answerText": "inode", "isCorrect": false},
+      { "id": 2, "answerText": "ls", "isCorrect": true},
+      { "id": 3, "answerText": "ln", "isCorrect": false},
+      { "id": 4, "answerText": "cp", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 117,
+    "type": "sc",
+    "questionText": "Which of the following file permissions belong to a symbolic link?",
+    "answers": [
+      { "id": 1, "answerText": "-rwxrwxrwx", "isCorrect": false},
+      { "id": 2, "answerText": "+rwxrwxrwx", "isCorrect": false},
+      { "id": 3, "answerText": "lrwxrwxrwx", "isCorrect": true},
+      { "id": 4, "answerText": "srwxrwxrwx", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 118,
+    "type": "sc",
+    "questionText": "Creating a hard link to an ordinary file returns an error. What could be the reason for this?",
+    "answers": [
+      { "id": 1, "answerText": "The source file is hidden.", "isCorrect": false},
+      { "id": 2, "answerText": "The source file is read-only.", "isCorrect": false},
+      { "id": 3, "answerText": "The source file is a shell script.", "isCorrect": false},
+      { "id": 4, "answerText": "The source file is already a hard link.", "isCorrect": false},
+      { "id": 5, "answerText": "The source and the target are on different filesystems.", "isCorrect": true}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 119,
+    "type": "sc",
+    "questionText": "Which of the following commands will change the quota for a specific user?",
+    "answers": [
+      { "id": 1, "answerText": "edquota", "isCorrect": true},
+      { "id": 2, "answerText": "repquota", "isCorrect": false},
+      { "id": 3, "answerText": "quota -e", "isCorrect": false},
+      { "id": 4, "answerText": "quota", "isCorrect": false}
+    ],
+    "hint": ""
+  },
+  {
+    "id": 120,
+    "type": "fi",
+    "questionText": "Which command is used to create and initialize the files used to store quota information? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "quotacheck", "isCorrect": true }
+    ],
+    "hint": ""
+  }
+]
+
+    ,
+    "lpic102":
+    [
+  {
+    "id": 1,
+    "type": "sc",
+    "questionText": "Which character in the password field of /etc/passwd is used to indicate that the encrypted password is stored in /etc/shadow?",
+    "answers": [
+      { "id": 1, "answerText": "*", "isCorrect": false},
+      { "id": 2, "answerText": "-", "isCorrect": false},
+      { "id": 3, "answerText": "s", "isCorrect": false},
+      { "id": 4, "answerText": "x", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 2,
+    "type": "mc",
+    "questionText": "Which of the following fields are available in both the global /etc/crontab file as well as in user- specific crontab files? (Select TWO correct answers)",
+    "answers": [
+      { "id": 1, "answerText": "Year", "isCorrect": false},
+      { "id": 2, "answerText": "Minute", "isCorrect": true},
+      { "id": 3, "answerText": "Username", "isCorrect": false},
+      { "id": 4, "answerText": "Command", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 3,
+    "type": "sc",
+    "questionText": "Which command can be used to delete a group from a Linux system?",
+    "answers": [
+      { "id": 1, "answerText": "groupdel", "isCorrect": true},
+      { "id": 2, "answerText": "groupmod", "isCorrect": false},
+      { "id": 3, "answerText": "groups", "isCorrect": false},
+      { "id": 4, "answerText": "groupedit", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 4,
+    "type": "sc",
+    "questionText": "What is the purpose of the iconv command?",
+    "answers": [
+      { "id": 1, "answerText": "It converts bitmap images from one format to another such as PNG to JPEG.", "isCorrect": false},
+      { "id": 2, "answerText": "It verifies that the root directory tree complies to all conventions from the Filesystem Hierarchy Standard (FHS).", "isCorrect": false},
+      { "id": 3, "answerText": "It displays additional meta information from icon files ending in .ico.", "isCorrect": false},
+      { "id": 4, "answerText": "It changes the mode of an inode in the ext4 file system.", "isCorrect": false},
+      { "id": 5, "answerText": "It converts files from one character encoding to another.", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 5,
+    "type": "sc",
+    "questionText": "In case neither cron.allow nor cron.deny exist in /etc/, which of the following is true?",
+    "answers": [
+      { "id": 1, "answerText": "Without additional configuration, no users may have user specific crontabs.", "isCorrect": true},
+      { "id": 2, "answerText": "Without additional configuration, all users may have user specific crontabs.", "isCorrect": false},
+      { "id": 3, "answerText": "The cron daemon will refuse to start and report missing files in the system's logfile.", "isCorrect": false},
+      { "id": 4, "answerText": "When a user creates a user specific crontab the system administrator must approve it explicitly.", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 6,
+    "type": "sc",
+    "questionText": "Which of the following commands can remove a user from a group?",
+    "answers": [
+      { "id": 1, "answerText": "grouprm", "isCorrect": false},
+      { "id": 2, "answerText": "groupmod", "isCorrect": false},
+      { "id": 3, "answerText": "passwd", "isCorrect": false},
+      { "id": 4, "answerText": "usergroups", "isCorrect": false},
+      { "id": 5, "answerText": "usermod", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 7,
+    "type": "sc",
+    "questionText": "Where are user specific crontabs stored?",
+    "answers": [
+      { "id": 1, "answerText": "In the database file /etc/crontab.db which is shared by all users.", "isCorrect": false},
+      { "id": 2, "answerText": "As individual per-user files within /var/spool/cron.", "isCorrect": true},
+      { "id": 3, "answerText": "As individual per-user files in /etc/cron.user.d.", "isCorrect": false},
+      { "id": 4, "answerText": "In the .crontab file in the user's home directory.", "isCorrect": false},
+      { "id": 5, "answerText": "In the file /var/cron/user-crontab which is shared by all users.", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 8,
+    "type": "sc",
+    "questionText": "Which file contains the date of the last change of a user's password?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/gshadow", "isCorrect": false},
+      { "id": 2, "answerText": "/etc/passwd", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/pwdlog", "isCorrect": false},
+      { "id": 4, "answerText": "/etc/shadow", "isCorrect": true},
+      { "id": 5, "answerText": "/var/log/shadow", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 9,
+    "type": "sc",
+    "questionText": "Each entry in a crontab must end with what character?",
+    "answers": [
+      { "id": 1, "answerText": "Tab", "isCorrect": false},
+      { "id": 2, "answerText": "Space", "isCorrect": false},
+      { "id": 3, "answerText": "Backslash", "isCorrect": false},
+      { "id": 4, "answerText": "Newline", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 10,
+    "type": "sc",
+    "questionText": "To prevent a specific user from scheduling tasks with at, what should the administrator do?",
+    "answers": [
+      { "id": 1, "answerText": "Add the specific user to /etc/at.allow file.", "isCorrect": false},
+      { "id": 2, "answerText": "Add the specific user to [deny] section in the /etc/atd.conf file.", "isCorrect": false},
+      { "id": 3, "answerText": "Add the specific user to /etc/at.deny file.", "isCorrect": true},
+      { "id": 4, "answerText": "Add the specific user to nojobs group.", "isCorrect": false},
+      { "id": 5, "answerText": "Run the following: atd --deny [user].", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 11,
+    "type": "sc",
+    "questionText": "Which of the following crontab entries will execute myscript at 30 minutes past every hour on Sundays?",
+    "answers": [
+      { "id": 1, "answerText": "0 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 30 myscript", "isCorrect": false},
+      { "id": 2, "answerText": "30 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 6 myscript", "isCorrect": false},
+      { "id": 3, "answerText": "30 0 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 0 myscript", "isCorrect": false},
+      { "id": 4, "answerText": "30 0-23 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 0 myscript", "isCorrect": true},
+      { "id": 5, "answerText": "0 0-23 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 fragenLPIC101.tgz fragenLPIC102.tgz fragen.tar LPI-2016-I-101a-QA LPI-2016-I-101b-QA LPI-2016-I-101c-QA LPI-2016-I-101d-QA LPI-2016-I-101e-QA LPI-2016-I-102a-QA LPI-2016-I-102b-QA LPI-2016-I-102c-QA LPI-2016-I-102d-QA LPI-2016-I-102e-QA LPI-2016-I-102f-QA LPI-2016-I-102g-QA LPI-2016-I-102h-QA lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 30 myscript", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 12,
+    "type": "sc",
+    "questionText": "Which of the following files assigns a user to its primary group?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/pgroup", "isCorrect": false},
+      { "id": 2, "answerText": "/etc/shadow", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/group", "isCorrect": false},
+      { "id": 4, "answerText": "/etc/passwd", "isCorrect": true},
+      { "id": 5, "answerText": "/etc/gshadow", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 13,
+    "type": "sc",
+    "questionText": "Which of the following commands should be added to /etc/bash_profile in order to change the language of messages for an internationalized program to Portuguese (pt)?",
+    "answers": [
+      { "id": 1, "answerText": "export LANGUAGE=\"pt\"", "isCorrect": false},
+      { "id": 2, "answerText": "export MESSAGE=\"pt\"", "isCorrect": false},
+      { "id": 3, "answerText": "export UI_MESSAGES=\"pt\"", "isCorrect": false},
+      { "id": 4, "answerText": "export LC_MESSAGES=\"pt\"", "isCorrect": true},
+      { "id": 5, "answerText": "export ALL_MESSAGES=\"pt\"", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 14,
+    "type": "mc",
+    "questionText": "Which commands can be used to change a user's account aging information? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "usermod", "isCorrect": true},
+      { "id": 2, "answerText": "passwd", "isCorrect": true},
+      { "id": 3, "answerText": "chattr", "isCorrect": false},
+      { "id": 4, "answerText": "chage", "isCorrect": true},
+      { "id": 5, "answerText": "chsh", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 15,
+    "type": "sc",
+    "questionText": "What is NOT contained in the locale setting of the operating system?",
+    "answers": [
+      { "id": 1, "answerText": "currency symbol", "isCorrect": false},
+      { "id": 2, "answerText": "language", "isCorrect": false},
+      { "id": 3, "answerText": "timezone", "isCorrect": true},
+      { "id": 4, "answerText": "thousands separator", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 16,
+    "type": "sc",
+    "questionText": "What is true about the file /etc/localtime?",
+    "answers": [
+      { "id": 1, "answerText": "It is a plain text file containing a string such as Europe/Berlin.", "isCorrect": false},
+      { "id": 2, "answerText": "It is created and maintained by the NTP service based on the geolocation of the system's IP address.", "isCorrect": false},
+      { "id": 3, "answerText": "It is a symlink to /sys/device/clock/ltime and always contains the current local time.", "isCorrect": false},
+      { "id": 4, "answerText": "It is either a symlink to or a copy of a timezone information file such as /usr/share/zoneinfo/Europe/Berlin", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 17,
+    "type": "mc",
+    "questionText": "What is true regarding the command userdel --force --remove bob? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "The user bob is removed from the system's user database.", "isCorrect": true},
+      { "id": 2, "answerText": "The user bob's home directory is removed.", "isCorrect": true},
+      { "id": 3, "answerText": "The locate database is updated to drop files owned by bob.", "isCorrect": false},
+      { "id": 4, "answerText": "All files owned by bob are remove from all mounted filesystems.", "isCorrect": false},
+      { "id": 5, "answerText": "In case bob was the last member of a group, that group is deleted.", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 18,
+    "type": "mc",
+    "questionText": "Which of the following fields can be found in the /etc/group file? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "The list of users that belong to the group.", "isCorrect": true},
+      { "id": 2, "answerText": "The home directory of the group.", "isCorrect": false},
+      { "id": 3, "answerText": "The name of the group.", "isCorrect": true},
+      { "id": 4, "answerText": "The description of the group.", "isCorrect": false},
+      { "id": 5, "answerText": "The password of the group.", "isCorrect": true}
+    ],
+    "hint": "Administrative Tasks"
+  },
+  {
+    "id": 19,
+    "type": "mc",
+    "questionText": "Which of the following tasks can be accomplished using the command date? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Synchronize the hardware and system clocks.", "isCorrect": false},
+      { "id": 2, "answerText": "Output date and time in different formats.", "isCorrect": true},
+      { "id": 3, "answerText": "Set the system clock.", "isCorrect": true},
+      { "id": 4, "answerText": "Set the hardware clock.", "isCorrect": false},
+      { "id": 5, "answerText": "Update the time via NTP.", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 20,
+    "type": "mc",
+    "questionText": "Which of the following are syslog facilities? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "local7", "isCorrect": true},
+      { "id": 2, "answerText": "mail", "isCorrect": true},
+      { "id": 3, "answerText": "advanced", "isCorrect": false},
+      { "id": 4, "answerText": "postmaster", "isCorrect": false},
+      { "id": 5, "answerText": "remote", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 21,
+    "type": "sc",
+    "questionText": "What is the purpose of the command mailq?",
+    "answers": [
+      { "id": 1, "answerText": "It fetches new emails from a remote server using POP3 or IMAP.", "isCorrect": false},
+      { "id": 2, "answerText": "It is a multi-user mailing list manager.", "isCorrect": false},
+      { "id": 3, "answerText": "It is a proprietary tool contained only in the qmail MTA.", "isCorrect": false},
+      { "id": 4, "answerText": "It queries the mail queue of the local MTA.", "isCorrect": true},
+      { "id": 5, "answerText": "It is a command-line based tool for reading and writing emails.", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 22,
+    "type": "sc",
+    "questionText": "Which file inside the CUPS configuration directory contains the definition of the printers?",
+    "answers": [
+      { "id": 1, "answerText": "cups-devices.conf", "isCorrect": false},
+      { "id": 2, "answerText": "snmp.conf", "isCorrect": false},
+      { "id": 3, "answerText": "printcap.conf", "isCorrect": false},
+      { "id": 4, "answerText": "printers.conf", "isCorrect": true},
+      { "id": 5, "answerText": "cupsd.conf", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 23,
+    "type": "sc",
+    "questionText": "What is true regarding the command sendmail?",
+    "answers": [
+      { "id": 1, "answerText": "With any MTA, the sendmail command must be run periodically by the cron daemon.", "isCorrect": false},
+      { "id": 2, "answerText": "All MTAs, including Postfix and Exim, provide a sendmail command.", "isCorrect": true},
+      { "id": 3, "answerText": "The sendmail command prints the MTAs queue history of which mails have been sent successfully.", "isCorrect": false},
+      { "id": 4, "answerText": "It is only available when the sendmail MTA is installed.", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 24,
+    "type": "sc",
+    "questionText": "Why is the correct configuration of a system's time zone important?",
+    "answers": [
+      { "id": 1, "answerText": "Because the conversion of Unix timestamps to local time relies on the time zone configuration.", "isCorrect": true},
+      { "id": 2, "answerText": "Because the time zone is saved as part of the modification times of files and cannot be changed after a file is created.", "isCorrect": false},
+      { "id": 3, "answerText": "Because the environment variables LANG and LC_MESSAGES are, by default, set according to the time zone.", "isCorrect": false},
+      { "id": 4, "answerText": "Because NTP chooses servers nearby based on the configured time zone.", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 25,
+    "type": "mc",
+    "questionText": "Which of the following parameters are used for journalctl to limit the time frame of the output? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "--from=", "isCorrect": false},
+      { "id": 2, "answerText": "--since=", "isCorrect": true},
+      { "id": 3, "answerText": "--until=", "isCorrect": true},
+      { "id": 4, "answerText": "--upto=", "isCorrect": false},
+      { "id": 5, "answerText": "--date=", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 26,
+    "type": "mc",
+    "questionText": "Which of the following are commonly used Mail Transfer Agent (MTA) applications? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Postfix", "isCorrect": true},
+      { "id": 2, "answerText": "Procmail", "isCorrect": false},
+      { "id": 3, "answerText": "Sendmail", "isCorrect": true},
+      { "id": 4, "answerText": "Exim", "isCorrect": true},
+      { "id": 5, "answerText": "SMTPd", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 27,
+    "type": "sc",
+    "questionText": "Which of the following is observed and corrected by a NTP client?",
+    "answers": [
+      { "id": 1, "answerText": "The skew in time between the system clock and the hardware clock.", "isCorrect": false},
+      { "id": 2, "answerText": "The skew in time between the system clock and the reference clock.", "isCorrect": true},
+      { "id": 3, "answerText": "Changes in the time zone of the current computer's location.", "isCorrect": false},
+      { "id": 4, "answerText": "Adjustments needed to support Daylight Saving Time.", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 28,
+    "type": "sc",
+    "questionText": "Which of the following is a legacy program provided by CUPS for sending files to the printer queues on the command line?",
+    "answers": [
+      { "id": 1, "answerText": "lpd", "isCorrect": false},
+      { "id": 2, "answerText": "lpp", "isCorrect": false},
+      { "id": 3, "answerText": "lpq", "isCorrect": false},
+      { "id": 4, "answerText": "lpr", "isCorrect": true}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 29,
+    "type": "sc",
+    "questionText": "What entry can be added to the syslog.conf file to have all syslog messages generated by a system displayed on console 12?",
+    "answers": [
+      { "id": 1, "answerText": "*.* /dev/tty12", "isCorrect": true},
+      { "id": 2, "answerText": "/var/log/messages | /dev/tty12", "isCorrect": false},
+      { "id": 3, "answerText": "| /dev/tty12", "isCorrect": false},
+      { "id": 4, "answerText": "syslog tty12", "isCorrect": false},
+      { "id": 5, "answerText": "mail.* /dev/tty12", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 30,
+    "type": "sc",
+    "questionText": "What is true about the ntpdate command?",
+    "answers": [
+      { "id": 1, "answerText": "It is the primary management command for the NTP time server.", "isCorrect": false},
+      { "id": 2, "answerText": "It updates the local system's date (i.e. day, month and year) but not the time (i.e. hours, minutes, seconds).", "isCorrect": false},
+      { "id": 3, "answerText": "It queries one or more NTP time servers and adjusts the system time accordingly.", "isCorrect": true},
+      { "id": 4, "answerText": "It sends the local system time to one or many remote NTP time servers for redistribution.", "isCorrect": false},
+      { "id": 5, "answerText": "It can be used by any user to set the user clock independently of the system clock.", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 31,
+    "type": "sc",
+    "questionText": "What is true regarding the file ~/.forward?",
+    "answers": [
+      { "id": 1, "answerText": "As it is owned by the MTA and not writable by the user, it must be edited using the editaliases command.", "isCorrect": false},
+      { "id": 2, "answerText": "After editing ~/.forward the user must run newaliases to make the mail server aware of the changes.", "isCorrect": false},
+      { "id": 3, "answerText": "Using ~/.forward, root may configure any email address whereas all other users may configure only their own addresses.", "isCorrect": false},
+      { "id": 4, "answerText": "When configured correctly, ~/.forward can be used to forward each incoming mail to more than one other recipient.", "isCorrect": true}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 32,
+    "type": "sc",
+    "questionText": "Which of the following commands is used to rotate, compress, and mail system logs?",
+    "answers": [
+      { "id": 1, "answerText": "rotatelog", "isCorrect": false},
+      { "id": 2, "answerText": "striplog", "isCorrect": false},
+      { "id": 3, "answerText": "syslogd --rotate", "isCorrect": false},
+      { "id": 4, "answerText": "logrotate", "isCorrect": true},
+      { "id": 5, "answerText": "logger", "isCorrect": false}
+    ],
+    "hint": "Essential System Services"
+  },
+  {
+    "id": 33,
+    "type": "mc",
+    "questionText": "What is the command to delete the default gateway from the system IP routing table? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "route del default", "isCorrect": true},
+      { "id": 2, "answerText": "ifconfig unset default", "isCorrect": false},
+      { "id": 3, "answerText": "netstat -r default", "isCorrect": false},
+      { "id": 4, "answerText": "ip route del default", "isCorrect": true},
+      { "id": 5, "answerText": "sysctl ipv4.default_gw=0", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 34,
+    "type": "sc",
+    "questionText": "What is the purpose of the nsswitch.conf file?",
+    "answers": [
+      { "id": 1, "answerText": "It is used to configure where the C library looks for system information such as host names and user passwords.", "isCorrect": true},
+      { "id": 2, "answerText": "It is used to configure network protocol port numbers such as for HTTP or SMTP.", "isCorrect": false},
+      { "id": 3, "answerText": "It is used to configure LDAP authentication services for the local system.", "isCorrect": false},
+      { "id": 4, "answerText": "It is used to configure which network services will be turned on during the next system boot.", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 35,
+    "type": "sc",
+    "questionText": "Which of the following commands will help identify a broken router between the local and the remote machine?",
+    "answers": [
+      { "id": 1, "answerText": "ps", "isCorrect": false},
+      { "id": 2, "answerText": "netstat", "isCorrect": false},
+      { "id": 3, "answerText": "nslookup", "isCorrect": false},
+      { "id": 4, "answerText": "ifconfig", "isCorrect": false},
+      { "id": 5, "answerText": "traceroute", "isCorrect": true}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 36,
+    "type": "sc",
+    "questionText": "Which of the following details is NOT provided in any output from the netstat utility?",
+    "answers": [
+      { "id": 1, "answerText": "broadcast services", "isCorrect": true},
+      { "id": 2, "answerText": "interface statistics", "isCorrect": false},
+      { "id": 3, "answerText": "masquerading connections", "isCorrect": false},
+      { "id": 4, "answerText": "network connections", "isCorrect": false},
+      { "id": 5, "answerText": "routing tables", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 37,
+    "type": "mc",
+    "questionText": "Which of the following commands can be used to display the local routing table? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "ifconfig", "isCorrect": false},
+      { "id": 2, "answerText": "dig", "isCorrect": false},
+      { "id": 3, "answerText": "netstat", "isCorrect": true},
+      { "id": 4, "answerText": "route", "isCorrect": true},
+      { "id": 5, "answerText": "trackroute", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 38,
+    "type": "sc",
+    "questionText": "Which of the following is true about IPv6?",
+    "answers": [
+      { "id": 1, "answerText": "With IPv6, the TCP port numbers of most services have changed.", "isCorrect": false},
+      { "id": 2, "answerText": "IPv6 no longer supports broadcast addresses.", "isCorrect": true},
+      { "id": 3, "answerText": "IPv4 addresses can be used without any change with IPv6.", "isCorrect": false},
+      { "id": 4, "answerText": "IPv6 no longer supports multicast addresses.", "isCorrect": false},
+      { "id": 5, "answerText": "For IPv6, UDP and TCP have been replaced by the Rapid Transmission Protocol RTP.", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 39,
+    "type": "sc",
+    "questionText": "What is true regarding a default route?",
+    "answers": [
+      { "id": 1, "answerText": "The default route is always used first. When the default route is not available more specific routes are tried.", "isCorrect": false},
+      { "id": 2, "answerText": "When a default route is set, all other routes are disabled until the default route is deleted.", "isCorrect": false},
+      { "id": 3, "answerText": "The default route is only used if there is not a more specific route to a destination host or network.", "isCorrect": true},
+      { "id": 4, "answerText": "Without a default route, no network communication even in directly attached networks is possible.", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 40,
+    "type": "mc",
+    "questionText": "Which of the following lines are valid in the file /etc/hosts? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "2001:db8::15 www.example.com www", "isCorrect": true},
+      { "id": 2, "answerText": "www.example.com www 203.0.13.15", "isCorrect": false},
+      { "id": 3, "answerText": "203.0.113.15 www.example.com www", "isCorrect": true},
+      { "id": 4, "answerText": "www.example.com,www 203.0.13.15,2001:db8::15", "isCorrect": false},
+      { "id": 5, "answerText": "2003.0.113.15,2001:db8::15 www.example.com www", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 41,
+    "type": "mc",
+    "questionText": "Which of the following keywords can be used in the file /etc/nsswitch.conf to specify a source for host name lookups? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "resolv", "isCorrect": false},
+      { "id": 2, "answerText": "dns", "isCorrect": true},
+      { "id": 3, "answerText": "remote", "isCorrect": false},
+      { "id": 4, "answerText": "files", "isCorrect": true},
+      { "id": 5, "answerText": "hosts", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 42,
+    "type": "mc",
+    "questionText": "Which of the following may occur as a consequence of using the command ifconfig? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "New name servers may be added to the resolver configuration.", "isCorrect": false},
+      { "id": 2, "answerText": "Network interfaces may become active or inactive.", "isCorrect": true},
+      { "id": 3, "answerText": "The routing table may change.", "isCorrect": true},
+      { "id": 4, "answerText": "IP addresses may change.", "isCorrect": true},
+      { "id": 5, "answerText": "The system's host name may change.", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 43,
+    "type": "sc",
+    "questionText": "What is true regarding TCP port 23?",
+    "answers": [
+      { "id": 1, "answerText": "Port 23 is the well known port for the telnet service which is a plain text protocol that should no longer be used.", "isCorrect": true},
+      { "id": 2, "answerText": "Port 23 is the well known port for the SSH service which provides secure logins.", "isCorrect": false},
+      { "id": 3, "answerText": "Port 23 is the well known port for the rlogin service which is SSL secured by default.", "isCorrect": false},
+      { "id": 4, "answerText": "Port 23 is the well known port for the system login services which are encrypted when the user runs the starttls command in his login shell.", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 44,
+    "type": "sc",
+    "questionText": "Which of the following statements is valid in the file /etc/nsswitch.conf?",
+    "answers": [
+      { "id": 1, "answerText": "multi on", "isCorrect": false},
+      { "id": 2, "answerText": "192.168.168.4 dns-server", "isCorrect": false},
+      { "id": 3, "answerText": "hosts: files dns", "isCorrect": true},
+      { "id": 4, "answerText": "include /etc/nsswitch.d/", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 45,
+    "type": "mc",
+    "questionText": "Which of the following IPv4 networks are reserved by IANA for private address assignment and private routing? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "127.0.0.0/8", "isCorrect": false},
+      { "id": 2, "answerText": "10.0.0.0/8", "isCorrect": true},
+      { "id": 3, "answerText": "169.255.0.0/16", "isCorrect": false},
+      { "id": 4, "answerText": "172.16.0.0/12", "isCorrect": true},
+      { "id": 5, "answerText": "192.168.0.0/16", "isCorrect": true}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 46,
+    "type": "sc",
+    "questionText": "Which of the following tools used for DNS debugging, reports not only the response from the name server but also details about the query?",
+    "answers": [
+      { "id": 1, "answerText": "dnsq", "isCorrect": false},
+      { "id": 2, "answerText": "dig", "isCorrect": true},
+      { "id": 3, "answerText": "hostname", "isCorrect": false},
+      { "id": 4, "answerText": "dnslookup", "isCorrect": false},
+      { "id": 5, "answerText": "zoneinfo", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 47,
+    "type": "mc",
+    "questionText": "What of the following can be done by the command ifconfig? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Set a network interface active or inactive.", "isCorrect": true},
+      { "id": 2, "answerText": "Specify the kernel module to be used with a network interface.", "isCorrect": false},
+      { "id": 3, "answerText": "Allow regular users to change the network configuration of a network interface.", "isCorrect": false},
+      { "id": 4, "answerText": "Change the netmask used on a network interface.", "isCorrect": true},
+      { "id": 5, "answerText": "Specify which network services are available on a network interface.", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 48,
+    "type": "sc",
+    "questionText": "Which of the following programs can be used to determine the routing path to a given destination?",
+    "answers": [
+      { "id": 1, "answerText": "dig", "isCorrect": false},
+      { "id": 2, "answerText": "netstat", "isCorrect": false},
+      { "id": 3, "answerText": "ping", "isCorrect": false},
+      { "id": 4, "answerText": "route", "isCorrect": false},
+      { "id": 5, "answerText": "traceroute", "isCorrect": true}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 49,
+    "type": "sc",
+    "questionText": "Given the following routing table: IP routing table Destination Gateway Genmask Flags Metric Ref Use Iface 0.0.0.0 192.168.178.1 0.0.0.0 UG 0 0 0 wlan0 192.168.1.0 0.0.0.0 255.255.255.0 U 0 0 0 eth0 192.168.2.0 192.168.1.1 255.255.255.0 U 0 0 0 eth0 192.168.178.0 0.0.0.0 255.255.255.0 U 9 0 0 wlan0 How would an outgoing packet to the destination 192.168.2.150 be handled?",
+    "answers": [
+      { "id": 1, "answerText": "It would be passed to the default router 192.168.178.1 on wlan0.", "isCorrect": false},
+      { "id": 2, "answerText": "It would be directly transmitted on the device eth0.", "isCorrect": false},
+      { "id": 3, "answerText": "It would be passed to the default router 255.255.255.0 on eth0.", "isCorrect": false},
+      { "id": 4, "answerText": "It would be directly transmitted on the device wlan0.", "isCorrect": false},
+      { "id": 5, "answerText": "It would be passed to the router 192.168.1.1 on eth0.", "isCorrect": true}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 50,
+    "type": "sc",
+    "questionText": "Which of the following is a valid IPv6 address?",
+    "answers": [
+      { "id": 1, "answerText": "2001:db8:3241::1", "isCorrect": true},
+      { "id": 2, "answerText": "2001::db8:4581::1", "isCorrect": false},
+      { "id": 3, "answerText": "2001:db8:0g41::1", "isCorrect": false},
+      { "id": 4, "answerText": "2001%db8%9990%%1", "isCorrect": false},
+      { "id": 5, "answerText": "2001.db8.819f..1", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 51,
+    "type": "mc",
+    "questionText": "Which of the following keywords can be used in the file /etc/resolv.conf? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "substitute", "isCorrect": false},
+      { "id": 2, "answerText": "nameserver", "isCorrect": true},
+      { "id": 3, "answerText": "search", "isCorrect": true},
+      { "id": 4, "answerText": "lookup", "isCorrect": false},
+      { "id": 5, "answerText": "method", "isCorrect": false}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 52,
+    "type": "sc",
+    "questionText": "On a regular users workstation the route command takes a long time before printing out the routing table. Which of the following errors does that indicate?",
+    "answers": [
+      { "id": 1, "answerText": "The local routing information may be corrupted and must be re-validated using a routing protocol.", "isCorrect": false},
+      { "id": 2, "answerText": "One of the routers in the routing table is not available which causes the automatic router failure detection mechanism (ARF-D) to wait for a timeout.", "isCorrect": false},
+      { "id": 3, "answerText": "There may accidentally be more than one default router in which case a default router election has to be done on the network in order to choose one router as the default.", "isCorrect": false},
+      { "id": 4, "answerText": "DNS resolution may not be working as route by default tries to resolve names of routers and destinations and may run into a timeout.", "isCorrect": true}
+    ],
+    "hint": "Networking Fundamentals"
+  },
+  {
+    "id": 53,
+    "type": "sc",
+    "questionText": "Which configuration file would be edited to change the default options for outbound SSH sessions?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/ssh/sshd_config", "isCorrect": false},
+      { "id": 2, "answerText": "/etc/ssh/ssh", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/ssh/client", "isCorrect": false},
+      { "id": 4, "answerText": "/etc/ssh/ssh_config", "isCorrect": true},
+      { "id": 5, "answerText": "/etc/ssh/ssh_client", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 54,
+    "type": "sc",
+    "questionText": "Which of the following programs uses the hosts.allow file to perform its main task of checking for access control restrictions to system services?",
+    "answers": [
+      { "id": 1, "answerText": "tcpd", "isCorrect": true},
+      { "id": 2, "answerText": "inetd", "isCorrect": false},
+      { "id": 3, "answerText": "fingerd", "isCorrect": false},
+      { "id": 4, "answerText": "mountd", "isCorrect": false},
+      { "id": 5, "answerText": "xinetd", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 55,
+    "type": "sc",
+    "questionText": "Which command is used to set restrictions on the size of a core file that is created for a user when a program crashes?",
+    "answers": [
+      { "id": 1, "answerText": "core", "isCorrect": false},
+      { "id": 2, "answerText": "edquota", "isCorrect": false},
+      { "id": 3, "answerText": "ulimit", "isCorrect": true},
+      { "id": 4, "answerText": "quota", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 56,
+    "type": "sc",
+    "questionText": "When trying to unmount a device it is reported as being busy. Which of the following commands could be used to determine which process is causing this?",
+    "answers": [
+      { "id": 1, "answerText": "debug", "isCorrect": false},
+      { "id": 2, "answerText": "lsof", "isCorrect": true},
+      { "id": 3, "answerText": "nessus", "isCorrect": false},
+      { "id": 4, "answerText": "strace", "isCorrect": false},
+      { "id": 5, "answerText": "traceroute", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 57,
+    "type": "sc",
+    "questionText": "Which configuration file would be edited to change default options for the OpenSSH server?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/ssh/sshd_config", "isCorrect": true},
+      { "id": 2, "answerText": "/etc/ssh/ssh", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/ssh/server", "isCorrect": false},
+      { "id": 4, "answerText": "/etc/ssh/ssh_config", "isCorrect": false},
+      { "id": 5, "answerText": "/etc/ssh/ssh_server", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 58,
+    "type": "sc",
+    "questionText": "Which of the following find commands will print out a list of files owned by root and with the SUID bit set in / usr?",
+    "answers": [
+      { "id": 1, "answerText": "find /usr -uid 0 -perm +4000", "isCorrect": true},
+      { "id": 2, "answerText": "find -user root +mode +s /usr", "isCorrect": false},
+      { "id": 3, "answerText": "find -type suid -username root -d /usr", "isCorrect": false},
+      { "id": 4, "answerText": "find /usr -ls lpic101a.json lpic101b.json lpic101c.json lpic101d.json lpic101e.json lpic102a.json lpic102b.json transform_to_object transform_to_object_2 transform_to_object3 -u root", "isCorrect": false},
+      { "id": 5, "answerText": "find /usr -suid -perm +4000", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 59,
+    "type": "sc",
+    "questionText": "Which of the following commands preloads and manages keys that are used for automatic authentication while logging in to other machines using SSH?",
+    "answers": [
+      { "id": 1, "answerText": "sshd", "isCorrect": false},
+      { "id": 2, "answerText": "ssh-agent", "isCorrect": true},
+      { "id": 3, "answerText": "ssh-keygen", "isCorrect": false},
+      { "id": 4, "answerText": "ssh-add", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 60,
+    "type": "sc",
+    "questionText": "What is a purpose of an SSH host key?",
+    "answers": [
+      { "id": 1, "answerText": "It must be sent by any SSH client in addition to a user key in order to identify the client's host.", "isCorrect": false},
+      { "id": 2, "answerText": "It provides the server's identity information to connecting SSH clients.", "isCorrect": true},
+      { "id": 3, "answerText": "It is the root key by which all user SSH keys must be signed.", "isCorrect": false},
+      { "id": 4, "answerText": "It authenticates any user that logs into a remote machine from the key's host.", "isCorrect": false},
+      { "id": 5, "answerText": "It is used by system services like cron, syslog or a backup job to automatically connect to remote hosts.", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 61,
+    "type": "sc",
+    "questionText": "Which of the following commands can be used to limit the amount of memory a user may use?",
+    "answers": [
+      { "id": 1, "answerText": "umask", "isCorrect": false},
+      { "id": 2, "answerText": "usermod", "isCorrect": false},
+      { "id": 3, "answerText": "ulimit", "isCorrect": true},
+      { "id": 4, "answerText": "passwd", "isCorrect": false},
+      { "id": 5, "answerText": "chage", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 62,
+    "type": "mc",
+    "questionText": "Which of the following commands connects to the remote host example.com which has OpenSSH listening on TCP port 2222? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "ssh --port 2222 example.com", "isCorrect": false},
+      { "id": 2, "answerText": "ssh -p 2222 example.com", "isCorrect": true},
+      { "id": 3, "answerText": "ssh -o Port=2222 example.com", "isCorrect": true},
+      { "id": 4, "answerText": "ssh -o GatewayPort=2222 example.com", "isCorrect": false},
+      { "id": 5, "answerText": "ssh example.com:2222", "isCorrect": false}
+    ],
+    "hint": "Security"
+  },
+  {
+    "id": 63,
+    "type": "fi",
+    "questionText": "What word is missing from the following SQL statement? insert into tablename ________(909, 'text'); (Please specify the missing word using lower-case letters only.)",
+    "answers": [
+      { "id": 1, "answerText": "values", "isCorrect": true },
+      { "id": 2, "answerText": "VALUES", "isCorrect": true },
+      { "id": 3, "answerText": "values", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 64,
+    "type": "fi",
+    "questionText": "By default, the contents of which directory will be copied to a new user's home directory when the account is created by passing the -m option to the useradd command? (Specify the full path to the directory.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/skel", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 65,
+    "type": "fi",
+    "questionText": "What word is missing from the following SQL statement? prompt> __________ count(*) from tablename; (Please specify the missing word using lower-case letters only.)",
+    "answers": [
+      { "id": 1, "answerText": "select", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 66,
+    "type": "fi",
+    "questionText": "What command displays all aliases defined in the current shell? (Specify the command without any path information)",
+    "answers": [
+      { "id": 1, "answerText": "alias", "isCorrect": true },
+      { "id": 2, "answerText": "alias-p", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 67,
+    "type": "fi",
+    "questionText": "Which command can be used to investigate the properties for a particular window in X by clicking that window? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "xwininfo", "isCorrect": true },
+      { "id": 2, "answerText": "/usr/bin/xwininfo", "isCorrect": true },
+      { "id": 3, "answerText": "xwininfo", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 68,
+    "type": "fi",
+    "questionText": "What is the default name of the configuration file for the Xorg X11 server? (Specify the file name only without any path.)",
+    "answers": [
+      { "id": 1, "answerText": "xorg.conf", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 69,
+    "type": "fi",
+    "questionText": "What is the name of the simple graphical login manager that comes with a vanilla X11 installation? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "xdm", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 70,
+    "type": "fi",
+    "questionText": "Which file specifies the user accounts that can NOT submit jobs via at or batch? (Provide the full path and filename)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/at.deny", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 71,
+    "type": "fi",
+    "questionText": "The system's timezone may be set by linking /etc/localtime to an appropriate file in which directory? (Provide the full path to the directory, without any country information)",
+    "answers": [
+      { "id": 1, "answerText": "/usr/share/zoneinfo", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 72,
+    "type": "fi",
+    "questionText": "Which environment variable should be set in order to change the time zone for the commands run from within the environment variable's scope? (Specify the variable name only.)",
+    "answers": [
+      { "id": 1, "answerText": "TZ", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 73,
+    "type": "fi",
+    "questionText": "In which file, if present, must all users be listed that are allowed to use the cron scheduling system? (Specify the full name of the file, including path.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/cron.allow", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 74,
+    "type": "fi",
+    "questionText": "Which command is used to add an empty group to the system? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "groupadd", "isCorrect": true },
+      { "id": 2, "answerText": "/usr/sbin/groupadd", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 75,
+    "type": "fi",
+    "questionText": "Which option in the /etc/ntp.conf file specifies an external NTP source to be queried for time information? (Specify ONLY the option without any values or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "server", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 76,
+    "type": "fi",
+    "questionText": "After configuring printing on a Linux server, the administrator sends a test file to one of the printers and it fails to print. What command can be used to display the status of the printer's queue? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "lpq", "isCorrect": true },
+      { "id": 2, "answerText": "/usr/bin/lpq", "isCorrect": true },
+      { "id": 3, "answerText": "lpstat", "isCorrect": true },
+      { "id": 4, "answerText": "/usr/bin/lpstat", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 77,
+    "type": "fi",
+    "questionText": "After adding a new email alias to the configuration, which command must be run in order to ensure the MTA knows about it? (Specify the command without any path but including all required parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "newaliases", "isCorrect": true },
+      { "id": 2, "answerText": "sendmail-bi", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 78,
+    "type": "fi",
+    "questionText": "Which command is used to sync the hardware clock to the system clock? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "hwclock", "isCorrect": true },
+      { "id": 2, "answerText": "/sbin/hwclock", "isCorrect": true },
+      { "id": 3, "answerText": "/usr/sbin/hwclock", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 79,
+    "type": "fi",
+    "questionText": "Which command, available with all MTAs, is used to list the contents of the MTA's mail queue? (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "mailqsendmail", "isCorrect": true },
+      { "id": 2, "answerText": "/usr/sbin/sendmail", "isCorrect": true },
+      { "id": 3, "answerText": "/usr/lib/sendmail", "isCorrect": true },
+      { "id": 4, "answerText": "mailq", "isCorrect": true },
+      { "id": 5, "answerText": "/usr/bin/mailq", "isCorrect": true },
+      { "id": 6, "answerText": "sendmail-bp", "isCorrect": true },
+      { "id": 7, "answerText": "/usr/sbin/sendmail-bp", "isCorrect": true },
+      { "id": 8, "answerText": "/usr/lib/sendmail-bp", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 80,
+    "type": "fi",
+    "questionText": "Please specify the top directory containing the configuration files for the CUPS printing system. (Specify the full path to the directory.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/cups", "isCorrect": true },
+      { "id": 2, "answerText": "/etc/cups/", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 81,
+    "type": "fi",
+    "questionText": "With IPv6, how many bits have been used for the interface identifier of an unicast address? (Specify the number using digits only.)",
+    "answers": [
+      { "id": 1, "answerText": "64", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 82,
+    "type": "fi",
+    "questionText": "Which command is used to set the hostname of the local system? (Specify ONLY the commandwithout any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "hostname", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 83,
+    "type": "fi",
+    "questionText": "Which parameter must be passed to ifconfig to activate a previously inactive network interface? (Specify the parameter only without any command, path or additional options)",
+    "answers": [
+      { "id": 1, "answerText": "up", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 84,
+    "type": "fi",
+    "questionText": "How many IP-addresses can be used for unique hosts inside the IPv4 subnet 192.168.2.128/28? (Specify the number only without any additional information.)",
+    "answers": [
+      { "id": 1, "answerText": "14", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 85,
+    "type": "fi",
+    "questionText": "What is the lowest numbered unprivileged TCP port? (Specify the number in digits only.)",
+    "answers": [
+      { "id": 1, "answerText": "1024", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 86,
+    "type": "fi",
+    "questionText": "Which command, depending on its options, can display the open network connections, the routing tables, as well as network interface statistics. (Specify ONLY the command without any path or parameters.)",
+    "answers": [
+      { "id": 1, "answerText": "netstat", "isCorrect": true },
+      { "id": 2, "answerText": "/bin/netstat", "isCorrect": true },
+      { "id": 3, "answerText": "ss", "isCorrect": true },
+      { "id": 4, "answerText": "/usr/bin/ss", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 87,
+    "type": "fi",
+    "questionText": "Which port is the default server port for the HTTPS protocol? (Specify the port number using digits.)",
+    "answers": [
+      { "id": 1, "answerText": "443", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 88,
+    "type": "fi",
+    "questionText": "Which keyword must be listed in the hosts option of the Name Service Switch configuration file in order to make host lookups consult the /etc/hosts file?",
+    "answers": [
+      { "id": 1, "answerText": "files", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 89,
+    "type": "fi",
+    "questionText": "In an xinetd configuration file, which attribute specifies the network address that will be used to provide the service?",
+    "answers": [
+      { "id": 1, "answerText": "interface", "isCorrect": true },
+      { "id": 2, "answerText": "bind", "isCorrect": true },
+      { "id": 3, "answerText": "interface", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 90,
+    "type": "fi",
+    "questionText": "What argument to the -type option of find will match files that are symbolic links? (Specify only the argument and no other options or words.)",
+    "answers": [
+      { "id": 1, "answerText": "l", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 91,
+    "type": "fi",
+    "questionText": "With X11 forwarding in ssh, what environment variable is automatically set in the remote host shell that is not set when X11 forwarding is not enabled? (Specify only the environment variable without any additional commands or values.)",
+    "answers": [
+      { "id": 1, "answerText": "DISPLAY", "isCorrect": true },
+      { "id": 2, "answerText": "$DISPLAY", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 92,
+    "type": "fi",
+    "questionText": "The presence of what file will temporarily prevent all users except root from logging into the system? (Specify the full name of the file, including path.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/nologin", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 93,
+    "type": "fi",
+    "questionText": "Which directory holds the files that configure the xinetd service when using several configuration files instead of an integrated configuration file? (Specify the full path to the directory.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/xinetd.d", "isCorrect": true },
+      { "id": 2, "answerText": "/etc/xinetd.d/", "isCorrect": true },
+      { "id": 3, "answerText": "/etc/xinetd.d", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 94,
+    "type": "fi",
+    "questionText": "Which file lists which users can execute commands using sudo? (Specify the full name of the file, including path.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/sudoers", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 95,
+    "type": "fi",
+    "questionText": "Which file contains a set of services and hosts that will be allowed to connect to the server by going through a TCP Wrapper program such as tcpd? (Specify the full name of the file, including path.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/hosts.allow", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 96,
+    "type": "fi",
+    "questionText": "On a Linux system with shadow passwords enabled, which file in the file system contains the password hashes of all local users? (Specify the full name of the file, including path.)",
+    "answers": [
+      { "id": 1, "answerText": "/etc/shadow", "isCorrect": true }
+    ],
+    "hint": "(none)"
+  },
+  {
+    "id": 97,
+    "type": "sc",
+    "questionText": "What output will the following command sequence produce? echo '1 2 3 4 5 6' | while read a b c; do echo result: $c $b $a; done",
+    "answers": [
+      { "id": 1, "answerText": "result: 3 4 5 6 2 1", "isCorrect": true},
+      { "id": 2, "answerText": "result: 1 2 3 4 5 6", "isCorrect": false},
+      { "id": 3, "answerText": "result: 6 5 4", "isCorrect": false},
+      { "id": 4, "answerText": "result: 6 5 4 3 2 1", "isCorrect": false},
+      { "id": 5, "answerText": "result: 3 2 1", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 98,
+    "type": "sc",
+    "questionText": "When the command echo $? outputs 1, which of the following statements is true?",
+    "answers": [
+      { "id": 1, "answerText": "It is the process ID of the echo command.", "isCorrect": false},
+      { "id": 2, "answerText": "It is the process ID of the current shell.", "isCorrect": false},
+      { "id": 3, "answerText": "It is the exit value of the command executed immediately before echo.", "isCorrect": true},
+      { "id": 4, "answerText": "It is the exit value of the echo command.", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 99,
+    "type": "sc",
+    "questionText": "Which command makes the shell variable named VARIABLE visible to subshells?",
+    "answers": [
+      { "id": 1, "answerText": "export $VARIABLE", "isCorrect": false},
+      { "id": 2, "answerText": "export VARIABLE", "isCorrect": true},
+      { "id": 3, "answerText": "set $VARIABLE", "isCorrect": false},
+      { "id": 4, "answerText": "set VARIABLE", "isCorrect": false},
+      { "id": 5, "answerText": "env VARIABLE", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 100,
+    "type": "sc",
+    "questionText": "What output will the command seq 10 produce?",
+    "answers": [
+      { "id": 1, "answerText": "A continuous stream of numbers increasing in increments of 10 until stopped.", "isCorrect": false},
+      { "id": 2, "answerText": "The numbers 1 through 10 with one number per line.", "isCorrect": true},
+      { "id": 3, "answerText": "The numbers 0 through 9 with one number per line.", "isCorrect": false},
+      { "id": 4, "answerText": "The number 10 to standard output.", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 101,
+    "type": "sc",
+    "questionText": "After issuing: function myfunction { echo $1 $2 ; } in Bash, which output does: myfunction A B C Produce?",
+    "answers": [
+      { "id": 1, "answerText": "A B", "isCorrect": true},
+      { "id": 2, "answerText": "A B C", "isCorrect": false},
+      { "id": 3, "answerText": "A C", "isCorrect": false},
+      { "id": 4, "answerText": "B C", "isCorrect": false},
+      { "id": 5, "answerText": "C B A", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 102,
+    "type": "sc",
+    "questionText": "Which of the following commands puts the output of the command date into the shell variable mydate?",
+    "answers": [
+      { "id": 1, "answerText": "mydate=\"$(date)\"", "isCorrect": true},
+      { "id": 2, "answerText": "mydate=\"exec date\"", "isCorrect": false},
+      { "id": 3, "answerText": "mydate=\"$((date))\"", "isCorrect": false},
+      { "id": 4, "answerText": "mydate=\"date\"", "isCorrect": false},
+      { "id": 5, "answerText": "mydate=\"${date}\"", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 103,
+    "type": "mc",
+    "questionText": "Which of the following files, when existing, affect the behavior of the Bash shell? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "~/.bashconf", "isCorrect": false},
+      { "id": 2, "answerText": "~/.bashrc", "isCorrect": true},
+      { "id": 3, "answerText": "~/.bashdefaults", "isCorrect": false},
+      { "id": 4, "answerText": "~/.bash_etc", "isCorrect": false},
+      { "id": 5, "answerText": "~/.bash_profile", "isCorrect": true}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 104,
+    "type": "sc",
+    "questionText": "What is the difference between the commands test -e path and test -f path?",
+    "answers": [
+      { "id": 1, "answerText": "They are equivalent options with the same behaviour.", "isCorrect": false},
+      { "id": 2, "answerText": "The -f option tests for a regular file. The -e option tests for an empty file.", "isCorrect": false},
+      { "id": 3, "answerText": "Both options check the existence of the path. The -f option also confirms that it is a regular file.", "isCorrect": true},
+      { "id": 4, "answerText": "The -f option tests for a regular file. The -e option tests for an executable file.", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 105,
+    "type": "sc",
+    "questionText": "How can the existing environment variable FOOBAR be suppressed for the execution of the script./myscript only?",
+    "answers": [
+      { "id": 1, "answerText": "unset -v FOOBAR;./myscript", "isCorrect": false},
+      { "id": 2, "answerText": "set -a FOOBAR=\"\";./myscript", "isCorrect": false},
+      { "id": 3, "answerText": "env -u FOOBAR./myscript", "isCorrect": true},
+      { "id": 4, "answerText": "env -i FOOBAR./myscript", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 106,
+    "type": "sc",
+    "questionText": "When the command echo $$ outputs 12942, what is the meaning of 12942?",
+    "answers": [
+      { "id": 1, "answerText": "It is the process ID of the echo command.", "isCorrect": false},
+      { "id": 2, "answerText": "It is the process ID of the current shell.", "isCorrect": true},
+      { "id": 3, "answerText": "It is the process ID of the last command executed.", "isCorrect": false},
+      { "id": 4, "answerText": "It is the process ID of the last command which has been placed in the background.", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 107,
+    "type": "sc",
+    "questionText": "What output will the following command produce? seq 1 5 20",
+    "answers": [
+      { "id": 1, "answerText": "1 6 11 16", "isCorrect": true},
+      { "id": 2, "answerText": "1 5 10 15 20", "isCorrect": false},
+      { "id": 3, "answerText": "1 5 10 15", "isCorrect": false},
+      { "id": 4, "answerText": "2 3 4 5 6", "isCorrect": false},
+      { "id": 5, "answerText": "5 10 15", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 108,
+    "type": "sc",
+    "questionText": "Which of the following words is used to restrict the records that are returned from a SELECT SQL query based on a supplied criteria for the values in the records?",
+    "answers": [
+      { "id": 1, "answerText": "CASE", "isCorrect": false},
+      { "id": 2, "answerText": "FROM", "isCorrect": false},
+      { "id": 3, "answerText": "WHERE", "isCorrect": true},
+      { "id": 4, "answerText": "IF", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 109,
+    "type": "sc",
+    "questionText": "Which of the following commands lists all defined variables and functions within Bash?",
+    "answers": [
+      { "id": 1, "answerText": "env", "isCorrect": false},
+      { "id": 2, "answerText": "set", "isCorrect": true},
+      { "id": 3, "answerText": "env -a", "isCorrect": false},
+      { "id": 4, "answerText": "echo $ENV", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 110,
+    "type": "sc",
+    "questionText": "Which of the following SQL queries counts the number of occurrences for each value of the field order_type in the table orders?",
+    "answers": [
+      { "id": 1, "answerText": "SELECT order_type,COUNT(*) FROM orders WHERE order_type=order_type;", "isCorrect": false},
+      { "id": 2, "answerText": "SELECT order_type,COUNT(*) FROM orders GROUP BY order_type;", "isCorrect": true},
+      { "id": 3, "answerText": "COUNT(SELECT order_type FROM orders);", "isCorrect": false},
+      { "id": 4, "answerText": "SELECT COUNT(*) FROM orders ORDER BY order_type;", "isCorrect": false},
+      { "id": 5, "answerText": "SELECT AUTO_COUNT FROM orders COUNT order_type;", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 111,
+    "type": "sc",
+    "questionText": "What is the purpose of the file /etc/profile?",
+    "answers": [
+      { "id": 1, "answerText": "It contains the welcome message that is displayed after login.", "isCorrect": false},
+      { "id": 2, "answerText": "It contains security profiles defining which users are allowed to log in.", "isCorrect": false},
+      { "id": 3, "answerText": "It contains environment variables that are set when a user logs in.", "isCorrect": true},
+      { "id": 4, "answerText": "It contains default application profiles for users that run an application for the first time.", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 112,
+    "type": "mc",
+    "questionText": "Which of the following are requirements in order to run a shell script like a regular command from anywhere in the filesystem? (Choose THREE correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "The user issuing the command must be in the group script.", "isCorrect": false},
+      { "id": 2, "answerText": "The script file must be found in the $PATH.", "isCorrect": true},
+      { "id": 3, "answerText": "The script file must have the executable permission bit set.", "isCorrect": true},
+      { "id": 4, "answerText": "The script must begin with a shebang-line (#!) that points to the correct interpreter.", "isCorrect": true},
+      { "id": 5, "answerText": "The file system on which the script resides must be mounted with the option scripts.", "isCorrect": false}
+    ],
+    "hint": "Shells, Scripting and Data Management"
+  },
+  {
+    "id": 113,
+    "type": "sc",
+    "questionText": "Which file used by XDM specifies the default wallpaper?",
+    "answers": [
+      { "id": 1, "answerText": "/etc/X11/xdm/Xsetup", "isCorrect": true},
+      { "id": 2, "answerText": "/etc/X11/xdm.conf", "isCorrect": false},
+      { "id": 3, "answerText": "/etc/X11/xdm/Defaults", "isCorrect": false},
+      { "id": 4, "answerText": "/etc/X11/defaults.conf", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 114,
+    "type": "sc",
+    "questionText": "The X11 configuration file xorg.conf is grouped into sections. How is the content of the section SectionName associated with that section?",
+    "answers": [
+      { "id": 1, "answerText": "It is placed in curly brackets as in Section SectionName { ... }.", "isCorrect": false},
+      { "id": 2, "answerText": "It is placed between a line containing Section \"SectionName\" and a line containing EndSection.", "isCorrect": true},
+      { "id": 3, "answerText": "It is placed between the tags <Section name=\"SectionName\"> and </Section>", "isCorrect": false},
+      { "id": 4, "answerText": "It is placed after the row [SectionName].", "isCorrect": false},
+      { "id": 5, "answerText": "It is placed after an initial unindented Section \"SectionName\" and must be indented by exactly one tab character.", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 115,
+    "type": "sc",
+    "questionText": "What is the purpose of a screen reader?",
+    "answers": [
+      { "id": 1, "answerText": "It reads text displayed on the screen to blind or visually impaired people.", "isCorrect": true},
+      { "id": 2, "answerText": "It reads the parameters of the attached monitors and creates an appropriate X11 configuration.", "isCorrect": false},
+      { "id": 3, "answerText": "It displays lines and markers to help people use speed reading techniques.", "isCorrect": false},
+      { "id": 4, "answerText": "It manages and displays files that contain e-books.", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 116,
+    "type": "sc",
+    "questionText": "How is a display manager started?",
+    "answers": [
+      { "id": 1, "answerText": "It is started by a user using the command startx.", "isCorrect": false},
+      { "id": 2, "answerText": "It is started like any other system service by the init system.", "isCorrect": true},
+      { "id": 3, "answerText": "It is started by inetd when a remote hosts connects to the X11 port.", "isCorrect": false},
+      { "id": 4, "answerText": "It is started automatically when a X11 user logs in to the system console.", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 117,
+    "type": "sc",
+    "questionText": "Which of the following commands shows the current color depth of the X Server?",
+    "answers": [
+      { "id": 1, "answerText": "xcd", "isCorrect": false},
+      { "id": 2, "answerText": "xcdepth", "isCorrect": false},
+      { "id": 3, "answerText": "xwininfo", "isCorrect": true},
+      { "id": 4, "answerText": "xcolordepth", "isCorrect": false},
+      { "id": 5, "answerText": "cat /etc/X11", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 118,
+    "type": "sc",
+    "questionText": "For accessibility assistance, which of the following programs is an on-screen keyboard?",
+    "answers": [
+      { "id": 1, "answerText": "xkb", "isCorrect": false},
+      { "id": 2, "answerText": "atkb", "isCorrect": false},
+      { "id": 3, "answerText": "GOK", "isCorrect": true},
+      { "id": 4, "answerText": "xOSK", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 119,
+    "type": "mc",
+    "questionText": "Which of the following are tasks handled by a display manager like XDM or KDM? (Choose TWO correct answers.)",
+    "answers": [
+      { "id": 1, "answerText": "Start and prepare the desktop environment for the user.", "isCorrect": true},
+      { "id": 2, "answerText": "Configure additional devices like new monitors or projectors when they are attached.", "isCorrect": false},
+      { "id": 3, "answerText": "Handle the login of a user.", "isCorrect": true},
+      { "id": 4, "answerText": "Lock the screen when the user was inactive for a configurable amount of time.", "isCorrect": false},
+      { "id": 5, "answerText": "Create an X11 configuration file for the current graphic devices and monitors.", "isCorrect": false}
+    ],
+    "hint": "User Interfaces and Desktops"
+  },
+  {
+    "id": 120,
+    "type": "sc",
+    "questionText": "Which of the following steps prevents a user from obtaining an interactive login session?",
+    "answers": [
+      { "id": 1, "answerText": "Run the command chsh -s /bin/false with the user name.", "isCorrect": true},
+      { "id": 2, "answerText": "Set the UID for the user to 0.", "isCorrect": false},
+      { "id": 3, "answerText": "Remove the user from the group staff.", "isCorrect": false},
+      { "id": 4, "answerText": "Add the user to /etc/noaccess.", "isCorrect": false},
+      { "id": 5, "answerText": "Create a .nologin file in the user's home directory.", "isCorrect": false}
+    ],
+    "hint": "Administrative Tasks"
+  }
+]
+
+}

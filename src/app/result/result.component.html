@@ -1,0 +1,106 @@
+<div class="container py-4 d-flex flex-column" style="height: 100vh;">
+  <!-- Ergebnis-Karte -->
+  <div class="card shadow-sm mb-4 text-center">
+    <div class="card-body">
+      <div class="display-4 mb-2">
+        {{ score / questions.length >= 0.5 ? '🏆' : '😬' }}
+      </div>
+      <h3 class="card-title">Ergebnis</h3>
+      <p class="lead">{{ score }} von {{ questions.length }} Fragen richtig</p>
+
+      <div class="progress mb-3" style="height: 25px;">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          [style.width.%]="(score / questions.length) * 100"
+          [class.bg-success]="score >= questions.length / 2"
+          [class.bg-danger]="score < questions.length / 2"
+        >
+          {{ ((score / questions.length) * 100) | number: '1.0-0' }}%
+        </div>
+      </div>
+
+      <button class="btn btn-primary me-2" (click)="goHome()">
+        Neues Quiz starten
+      </button>
+      
+    </div>
+  </div>
+
+  <!-- Legende -->
+  <div class="mb-3 d-flex gap-2">
+    <span class="badge bg-success">Richtig</span>
+    <span class="badge bg-danger">Falsch</span>
+    <span class="badge bg-secondary">Nicht beantwortet</span>
+  </div>
+
+  <!-- Accordion in Scrollbox -->
+  <div class="accordion flex-grow-1 overflow-auto" id="resultAccordion" style="min-height: 0;">
+    <div class="accordion-item mb-2" *ngFor="let q of questions; let i = index">
+      <h2 class="accordion-header" [id]="'heading' + i">
+        <button
+          class="accordion-button question-header"
+          [ngClass]="getQuestionClass(q)"
+          [class.collapsed]="openIndex !== i"
+          type="button"
+          (click)="toggleAccordion(i)"
+        >
+          Frage {{ i + 1 }}: {{ q.questionText }}
+        </button>
+      </h2>
+      <div
+        [id]="'collapse' + i"
+        class="accordion-collapse collapse"
+        [class.show]="openIndex === i"
+      >
+        <div class="accordion-body">
+          <!-- Single/Multiple Choice -->
+          <ul class="list-group" *ngIf="q.type !== 'fi'">
+            <li
+              *ngFor="let a of q.answers"
+              class="list-group-item d-flex justify-content-between align-items-center"
+              [ngClass]="{
+                'list-group-item-success': a.isCorrect,
+                'list-group-item-danger':
+                  userAnswers[q.globalId]?.includes(a.id) && !a.isCorrect
+              }"
+            >
+              {{ a.answerText }}
+              <span *ngIf="a.isCorrect" class="badge bg-success">Richtig</span>
+              <span
+                *ngIf="userAnswers[q.globalId]?.includes(a.id) && !a.isCorrect"
+                class="badge bg-danger"
+              >
+                Deine Antwort
+              </span>
+              <span
+                *ngIf="userAnswers[q.globalId]?.includes(a.id) && a.isCorrect"
+                class="badge bg-primary"
+              >
+                ✓
+              </span>
+            </li>
+          </ul>
+
+          <!-- Fill-In -->
+          <div *ngIf="q.type === 'fi'">
+            <p><strong>Deine Antwort:</strong> {{ userAnswers[q.globalId]?.[0] }}</p>
+            <p><strong>Korrekt:</strong> {{ getCorrectAnswers(q) }}</p>
+            <div
+              class="alert"
+              [class.alert-success]="isFillInCorrect(q, userAnswers[q.globalId]?.[0])"
+              [class.alert-danger]="!isFillInCorrect(q, userAnswers[q.globalId]?.[0])"
+            >
+              {{ isFillInCorrect(q, userAnswers[q.globalId]?.[0]) ? 'Richtig!' : 'Falsch.' }}
+            </div>
+          </div>
+
+          <!-- Hinweis -->
+          <div *ngIf="q.hint" class="alert alert-info mt-3">
+            Hinweis: {{ q.hint }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
